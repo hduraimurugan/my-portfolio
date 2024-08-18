@@ -19,11 +19,11 @@ header ul li {
 }
 
 .mobile-nav{
-    @apply fixed top-20 left-0 bg-blue-950 w-full h-1/4;
+    @apply fixed top-20 left-0 w-full h-1/4;
 }
 
 .mobile-nav li{
-    @apply w-full h-full text-center hover:bg-violet-700 border-b-2 items-center pt-2 ;
+    @apply w-full h-full text-center bg-blue-950 hover:bg-violet-700 border-b-2 items-center py-3 ;
     
 }
 
