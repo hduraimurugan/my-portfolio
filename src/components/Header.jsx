@@ -35,12 +35,12 @@ const Header = () => {
                 </nav>
                 {toggleMenu && <nav className='block md:hidden'>
                     <ul className='flex flex-col text-white mobile-nav font-list-font' onClick={handleLinkClick}>
-                        <li><a href='#'>Home</a></li>
-                        <li><a href='#skills'>Skills</a></li>
-                        <li><a href='#projects'>Projects</a></li>
-                        <li><a href='#about'>About</a></li>
-                        <li><a href='#resume'>Resume</a></li>
-                        <li><a href='#contact'>Contact</a></li>
+                        <a href='#'><li>Home</li></a>
+                        <a href='#skills'><li>Skills</li></a>
+                        <a href='#projects'><li>Projects</li></a>
+                        <a href='#about'><li>About</li></a>
+                        <a href='#resume'><li>Resume</li></a>
+                        <a href='#contact'><li>Contact</li></a>
                     </ul>
                 </nav>}
                 <button onClick={() => setToggleMenu(!toggleMenu)} className='block md:hidden'><Bars3Icon className='text-white h-7' /></button>
