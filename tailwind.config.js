@@ -6,8 +6,11 @@ export default {
   theme: {
     extend: {
       borderColor: {
-        'primary': 'rgb(65, 2, 167)',
-        'secondary': 'rgb(92, 39, 218)',
+        'primary': 'rgb(19, 31, 189)',
+        'secondary': 'rgb(23, 84, 227)',
+      },
+      backgroundImage: {
+        'hero-pattern': "url('./src/assets/backdrop.jpg')",
       }
     },
     fontFamily:{

@@ -11,11 +11,14 @@ header ul li {
 }
 
 .bg-primary{
-    background-color: rgb(65, 2, 167);
+    /* background-color: rgb(19, 31, 189); */
+    @apply bg-gradient-to-r from-blue-800 to-indigo-900;
 }
 
 .bg-secondary{
-    background-color: rgb(92, 39, 218);
+    /* background-color: rgb(23, 84, 227); */
+    @apply bg-gradient-to-r from-blue-600 to-violet-600;
+    
 }
 
 .mobile-nav{
@@ -23,7 +26,7 @@ header ul li {
 }
 
 .mobile-nav li{
-    @apply w-full h-full text-center bg-blue-950 hover:bg-violet-700 border-b-2 items-center py-3 ;
+    @apply w-full h-full text-center bg-blue-900 hover:bg-blue-950 border-b-2 items-center py-3 ;
     
 }
 
@@ -32,12 +35,19 @@ header ul li {
 }
 
 .button-link{
-    @apply bg-gray-200 text-gray-900 font-bold font-list-font px-3 py-2 rounded-md hover:scale-105;
+    /* @apply bg-gray-200 text-gray-900 font-bold font-list-font px-3 py-2 rounded-md hover:scale-105; */
+    @apply text-gray-900 bg-gradient-to-r from-teal-400 to-blue-400 hover:from-blue-400 hover:to-teal-400 px-3 py-2 hover:font-bold rounded-md drop-shadow-md;
+
 }
 
 .btn-dark{
-    @apply  text-white bg-gray-700 px-3 py-3 rounded-md hover:scale-105 drop-shadow-md;
+    /* @apply  text-white bg-gray-700 px-3 py-3 rounded-md hover:scale-105 drop-shadow-md; */
+    @apply text-white bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 px-3 py-3 rounded-md drop-shadow-md;
 }
+
+/* .txt-gradient{
+    @apply bg-gradient-to-r from-violet-900 font-bold to-violet-500  text-transparent bg-clip-text;
+} */
 
 html{
     scroll-behavior: smooth;

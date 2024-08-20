@@ -47,24 +47,26 @@ const Projects = () => {
 
                 <div className='py-5 md:w-full '>
 
-                    <div className='flex flex-col md:flex-row flex-wrap justify-center px-10 gap-6'>
+                    <div className='flex flex-col md:flex-row flex-wrap items-center md:justify-center px-10 gap-6'>
 
                         {projects.map((project, index) => (
                             <div className='relative' key={index}>
                                 <img
-                                    className='md:h-[200px] w-[400px] h-[160px] border-2 border-gray-300 drop-shadow-md rounded-md'
+                                    className='md:h-[200px] h-[160px] border-2 border-gray-300 drop-shadow-md rounded-md'
                                     src={project.imgSrc}
                                 />
-                                <div className='project-desc rounded-md'>
-                                    <p className='text-center md:text-2xl text-xl font-list-font md:mt-10 mt-2 px-5 py-2'>
-                                        {project.description}
-                                    </p>
-                                    <div className='flex justify-center gap-7'>
+                                <div className='project-desc flex flex-col justify-center gap-3 px-3 py-3 rounded-md'>
+                                    <div>
+                                        <p className='text-center md:text-2xl text-md font-list-font'>
+                                            {project.description}
+                                        </p>
+                                    </div>
+                                    <div className='flex justify-center md:gap-7 gap-3'>
                                         <a href={project.liveLink} target='_blank' rel='noopener noreferrer'>
-                                            <button className='button-link'>Live Link</button>
+                                            <button className='button-link md:text-lg text-sm'>Live Link</button>
                                         </a>
                                         <a href={project.codeLink} target='_blank' rel='noopener noreferrer'>
-                                            <button className='button-link'>View Code</button>
+                                            <button className='button-link md:text-lg text-sm'>View Code</button>
                                         </a>
                                     </div>
                                 </div>
