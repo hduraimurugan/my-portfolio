@@ -36,7 +36,7 @@ header ul li {
 
 .button-link{
     /* @apply bg-gray-200 text-gray-900 font-bold font-list-font px-3 py-2 rounded-md hover:scale-105; */
-    @apply text-gray-900 bg-gradient-to-r from-teal-400 to-blue-400 hover:from-blue-400 hover:to-teal-400 px-3 py-2 hover:font-bold rounded-md drop-shadow-md;
+    @apply text-gray-900 bg-gradient-to-r from-teal-400 to-blue-400 hover:from-blue-400 hover:to-teal-400 px-3 py-2  rounded-md drop-shadow-md;
 
 }
 

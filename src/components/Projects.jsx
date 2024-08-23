@@ -3,6 +3,7 @@ import zamazonImg from '../assets/zamazon.png'
 import chessApiImg from '../assets/chessApi.png'
 import routerDomImg from '../assets/routerDom.png'
 import shipKartImg from '../assets/shipKart.png'
+import LBMSImg from '../assets/LBMS.png'
 
 const Projects = () => {
 
@@ -12,6 +13,12 @@ const Projects = () => {
             description: "Ship-Kart is an E-commerce webpage built using ReactJs",
             liveLink: "https://cart-context-api-pied.vercel.app/",
             codeLink: "https://github.com/hduraimurugan/cart-contextAPI",
+        },
+        {
+            imgSrc: LBMSImg,
+            description: "Library Admin dashboard built using ReactJs Formik",
+            liveLink: "https://verdant-centaur-216ddb.netlify.app/",
+            codeLink: "https://github.com/hduraimurugan/formik_task",
         },
         {
             imgSrc: zamazonImg,
@@ -62,12 +69,22 @@ const Projects = () => {
                                         </p>
                                     </div>
                                     <div className='flex justify-center md:gap-7 gap-3'>
-                                        <a href={project.liveLink} target='_blank' rel='noopener noreferrer'>
-                                            <button className='button-link md:text-lg text-sm'>Live Link</button>
-                                        </a>
-                                        <a href={project.codeLink} target='_blank' rel='noopener noreferrer'>
-                                            <button className='button-link md:text-lg text-sm'>View Code</button>
-                                        </a>
+
+                                        <div className='transition duration-300 ease-in-out'>
+                                            <a href={project.liveLink} target='_blank' rel='noopener noreferrer'>
+                                                <button className='button-link md:text-lg text-sm hover:bg-blue-600 hover:text-white hover:shadow-lg'>
+                                                    Live Link
+                                                </button>
+                                            </a>
+                                        </div>
+                                        <div className='transition duration-300 ease-in-out'>
+                                            <a href={project.codeLink} target='_blank' rel='noopener noreferrer'>
+                                                <button className='button-link md:text-lg text-sm hover:bg-green-600 hover:text-white hover:shadow-lg'>
+                                                    View Code
+                                                </button>
+                                            </a>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
