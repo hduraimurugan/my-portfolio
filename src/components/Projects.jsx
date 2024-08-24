@@ -4,6 +4,7 @@ import chessApiImg from '../assets/chessApi.png'
 import routerDomImg from '../assets/routerDom.png'
 import shipKartImg from '../assets/shipKart.png'
 import LBMSImg from '../assets/LBMS.png'
+import reduxImg from '../assets/reduxKart.png'
 
 const Projects = () => {
 
@@ -13,6 +14,12 @@ const Projects = () => {
             description: "Ship-Kart is an E-commerce webpage built using ReactJs",
             liveLink: "https://cart-context-api-pied.vercel.app/",
             codeLink: "https://github.com/hduraimurugan/cart-contextAPI",
+        },
+        {
+            imgSrc: reduxImg,
+            description: "An E-commerce site built using ReactJs Redux toolkit",
+            liveLink: "https://redux-shopping-cart-mauve.vercel.app/",
+            codeLink: "https://github.com/hduraimurugan/redux-shopping-cart",
         },
         {
             imgSrc: LBMSImg,
@@ -59,7 +66,7 @@ const Projects = () => {
                         {projects.map((project, index) => (
                             <div className='relative' key={index}>
                                 <img
-                                    className='md:h-[200px] h-[160px] border-2 border-gray-300 drop-shadow-md rounded-md'
+                                    className='md:h-[200px] h-[160px] w-[356px] border-2 border-gray-300 drop-shadow-md rounded-md'
                                     src={project.imgSrc}
                                 />
                                 <div className='project-desc flex flex-col justify-center gap-3 px-3 py-3 rounded-md'>
