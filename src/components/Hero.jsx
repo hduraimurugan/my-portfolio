@@ -18,8 +18,8 @@ const Hero = () => {
                         <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='hover:text-blue-950'><AiOutlineMedium size={34} /></a>
                         <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='hover:text-blue-950'><AiOutlineLinkedin size={34} /></a>
                         <a href='https://github.com/hduraimurugan' target="_blank" className='hover:text-blue-950'><AiOutlineGithub size={34} /></a>
-                        <a href='https://x.com/hduraimurugan16' target="_blank" className='hover:text-blue-950'><AiOutlineTwitter size={34} /></a>
-                        <a href='https://www.instagram.com/duraimurugan_16/' target="_blank" className='hover:text-blue-950'><AiOutlineInstagram size={34} /></a>
+                        {/* <a href='https://x.com/hduraimurugan16' target="_blank" className='hover:text-blue-950'><AiOutlineTwitter size={34} /></a> */}
+                        {/* <a href='https://www.instagram.com/duraimurugan_16/' target="_blank" className='hover:text-blue-950'><AiOutlineInstagram size={34} /></a> */}
                     </div>
 
                 </div>

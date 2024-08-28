@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { IoIosSend } from "react-icons/io";
+import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
+
 
 const Contact = () => {
     const [state, handleSubmit] = useForm("xblryqrr");
@@ -48,7 +50,7 @@ const Contact = () => {
 
     return (
         <>
-            <section className='flex flex-col md:flex-row px-5 py-32 bg-secondary justify-center' id='contact'>
+            <section className='flex flex-col md:flex-row px-5 py-32 bg-secondary justify-around' id='contact'>
 
                 <div className='flex flex-col px-10 py-5 justify-center'>
                     
@@ -127,6 +129,13 @@ const Contact = () => {
                     {errorMessage && <div className='flex justify-center'><p className='text-red-500 text-xl font-list-font mt-5'>{errorMessage}</p></div>}
                
                 </div>
+
+                {/* <div className='flex flex-col'>
+                    <h1 className='text-white font-bold md:text-4xl text-2xl font-list-font border-b-4 border-primary md:w-[205px] w-[140px]'>DM Me here</h1>
+                    <a href='https://x.com/hduraimurugan16' target="_blank" className='hover:text-blue-950'><AiOutlineTwitter size={34} /></a>
+                    <a href='https://www.instagram.com/duraimurugan_16/' target="_blank" className='hover:text-blue-950'><AiOutlineInstagram size={34} /></a>
+                </div> */}
+              
 
             </section>
         </>
