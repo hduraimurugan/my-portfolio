@@ -17,10 +17,10 @@ const About = () => {
                                 <p className='text-white text-justify md:text-2xl text-xl font-list-font mt-10'>I'm <span className='font-bold'>Duraimurugan H</span>, a passionate web developer with a background in <span className='font-bold'>Instrumentation Engineering</span>. My journey began in the banking sector, where I worked as a <span className='font-bold'>Relationship Manager</span> in <span className='font-bold'>City Union Bank, Bangalore.</span></p>
                             </li>
                             <li>
-                                <p className='text-white text-justify md:text-2xl text-xl font-list-font mt-5'> My passion for the technology led me to transition into web development, where I gained expertise in <span className='font-bold'>HTML, CSS, JavaScript, ReactJS, NodeJS, MongoDB, MySQL </span> and more. </p>
+                                <p className='text-white text-justify md:text-2xl text-xl font-list-font mt-7'> My passion for the technology led me to transition into web development, where I gained expertise in <span className='font-bold'>HTML, CSS, JavaScript, ReactJS, NodeJS, MongoDB, MySQL </span> and more. </p>
                             </li>
                             <li>
-                                <p className='text-white text-justify md:text-2xl text-xl font-list-font mt-5'>I'm now eager to contribute my diverse skill set and enthusiasm to dynamic teams in the tech industry.</p>
+                                <p className='text-white text-justify md:text-2xl text-xl font-list-font mt-7'>I'm eager to contribute my diverse skill set and enthusiasm to dynamic teams in the tech industry.</p>
                             </li>
                         </ul>
 

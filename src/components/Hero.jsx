@@ -9,17 +9,17 @@ const Hero = () => {
             <section className='flex flex-col md:flex-row px-10 py-40 bg-secondary justify-center' id='hero'>
 
                 <div className='md:w-1/2 flex flex-col mt-10 mb-10'>
-                    <h1 className='text-white md:text-6xl text-3xl font-hero-font drop-shadow-md'><span className='text-blue-950 font-bold'>Hi, 
-                        </span><br/> Its <span className='text-white font-bold'>Duraimurugan H</span>
-                        <p className='md:text-4xl text-2xl mt-2'>I am a <span className='text-blue-950 font-bold'>MERN</span> stack Developer</p>
+                    <h1 className='text-white md:text-6xl text-3xl font-hero-font drop-shadow-md'><span className='text-indigo-300 font-bold'>Hi, 
+                        </span><br/> Its <span className='text-gray-100 font-bold'>Duraimurugan H</span>
+                        <p className='md:text-4xl text-2xl mt-2'>I am a <span className='text-indigo-300 font-bold'>MERN</span> stack Developer</p>
                     </h1>
 
                     <div className='flex gap-5 mt-16 text-white drop-shadow-md'>
-                        <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='hover:text-blue-950'><AiOutlineMedium size={34} /></a>
-                        <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='hover:text-blue-950'><AiOutlineLinkedin size={34} /></a>
-                        <a href='https://github.com/hduraimurugan' target="_blank" className='hover:text-blue-950'><AiOutlineGithub size={34} /></a>
-                        {/* <a href='https://x.com/hduraimurugan16' target="_blank" className='hover:text-blue-950'><AiOutlineTwitter size={34} /></a> */}
-                        {/* <a href='https://www.instagram.com/duraimurugan_16/' target="_blank" className='hover:text-blue-950'><AiOutlineInstagram size={34} /></a> */}
+                        <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='hover:text-indigo-400'><AiOutlineMedium size={34} /></a>
+                        <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='hover:text-indigo-400'><AiOutlineLinkedin size={34} /></a>
+                        <a href='https://github.com/hduraimurugan' target="_blank" className='hover:text-indigo-400'><AiOutlineGithub size={34} /></a>
+                        {/* <a href='https://x.com/hduraimurugan16' target="_blank" className='hover:text-indigo-400'><AiOutlineTwitter size={34} /></a> */}
+                        {/* <a href='https://www.instagram.com/duraimurugan_16/' target="_blank" className='hover:text-indigo-400'><AiOutlineInstagram size={34} /></a> */}
                     </div>
 
                 </div>

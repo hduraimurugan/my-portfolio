@@ -12,12 +12,12 @@ header ul li {
 
 .bg-primary{
     /* background-color: rgb(19, 31, 189); */
-    @apply bg-gradient-to-r from-blue-800 to-indigo-900;
+    @apply bg-gradient-to-r from-blue-800 to-indigo-950;
 }
 
 .bg-secondary{
     /* background-color: rgb(23, 84, 227); */
-    @apply bg-gradient-to-r from-blue-600 to-violet-600;
+    @apply bg-gradient-to-r from-blue-800 to-gray-900;
     
 }
 

@@ -21,7 +21,7 @@ const Projects = () => {
             description: "An E-commerce site built using ReactJs Redux toolkit",
             liveLink: "https://redux-shopping-cart-mauve.vercel.app/",
             codeLink: "https://github.com/hduraimurugan/redux-shopping-cart",
-            codesUsed: ["React Js", "Redux Toolkit", "Bootstrap"],
+            codesUsed: ["React Js", "Redux", "Bootstrap"],
 
         },
         {
@@ -45,7 +45,7 @@ const Projects = () => {
             description: "It is a Courses webpage built using React Router Dom",
             liveLink: "https://react-router-task-jdldaldada.netlify.app/",
             codeLink: "https://github.com/hduraimurugan/react-router",
-            codesUsed: ["React Js", "React-Router-Dom", "Bootstrap"],
+            codesUsed: ["React Js", "React-router-Dom", "Bootstrap"],
 
         },
         {
@@ -79,10 +79,10 @@ const Projects = () => {
                             <div className='bg-border-prj'>
                                 <div className='relative' key={index}>
                                     <img
-                                        className='md:h-[200px] h-[160px] w-[356px] rounded-md'
+                                        className='md:h-[200px] h-[160px] w-[356px] rounded-lg'
                                         src={project.imgSrc}
                                     />
-                                    <div className='project-desc flex flex-col justify-center gap-3 px-3 py-3 rounded-md'>
+                                    <div className='project-desc flex flex-col justify-center gap-3 px-3 py-3 rounded-lg'>
                                         <div>
                                             <p className='text-center text-white md:text-2xl text-md font-list-font'>
                                                 {project.description}
@@ -108,9 +108,9 @@ const Projects = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='p-3 my-3'>
+                                <div className='p-3 my-3 flex flex-row flex-wrap gap-2'>
                                     {project.codesUsed.map((code, idx) => (
-                                        <span key={idx} className='text-gray-200 font-semibold bg-indigo-500 border-primary-2 p-2 rounded-lg shadow-lg mr-2'>{code}</span>
+                                        <span key={idx} className='text-gray-200 md:text-md text-sm font-semibold bg-indigo-500 border-primary-2 p-2 rounded-lg shadow-lg mr-2'>{code}</span>
                                     ))}
                                 </div>
 
