@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+    .font-outline-1 {
+      -webkit-text-stroke: 1px white;
+    }
+}
+
+/* .hero-blend {
+    background-image: url('./assets/bg.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply; 
+} */
+
+
 header ul li {
     @apply px-3 ;
 }
