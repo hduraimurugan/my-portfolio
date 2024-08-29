@@ -83,7 +83,7 @@ function Skills({RevealOnScroll}) {
                                 <p className='text-black text-center font-bold text-2xl font-list-font'>{skill.name}</p>
 
                                 <div className='p-3'>
-                                    <div className="w-full bg-gray-300 rounded-full h-1.5 dark:bg-gray-700">
+                                    <div className="w-full bg-gray-300 rounded-full h-1.5">
                                         <div className="bg-indigo-700 h-1.5 rounded-full" style={{ width: `${skill.skill}%` }}></div>
                                     </div>
                                 </div>
