@@ -38,7 +38,7 @@ const Hero = () => {
                 </div>
 
                 <div className='py-5 md:w-1/3'>
-                    <img className='mix-blend-lighten' src={Hero2Img} alt='hero' />
+                    <img className='mix-blend-lighten' src={HeroImg} alt='hero' />
                 </div>
             </section>
         </>

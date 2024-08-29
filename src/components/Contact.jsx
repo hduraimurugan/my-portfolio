@@ -119,7 +119,7 @@ const Contact = () => {
                         </div>
 
                         <div className='flex justify-center w-full'>
-                            <button className='text-gray-900 md:text-2xl text-xl font-list-font button-link mt-5 flex' type="submit" disabled={state.submitting}>
+                            <button className='text-gray-900 md:text-2xl text-xl font-list-font button-link mt-5 flex gap-1 items-center justify-center' type="submit" disabled={state.submitting}>
                                 <IoIosSend size={28} />Send Message
                             </button>
                         </div>

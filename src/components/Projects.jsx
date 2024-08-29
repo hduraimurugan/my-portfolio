@@ -5,6 +5,8 @@ import routerDomImg from '../assets/routerDom.png'
 import shipKartImg from '../assets/shipKart.png'
 import LBMSImg from '../assets/LBMS.png'
 import reduxImg from '../assets/reduxKart.png'
+import { FaLink } from "react-icons/fa6";
+import { FaCode } from "react-icons/fa";
 
 const Projects = () => {
 
@@ -92,15 +94,15 @@ const Projects = () => {
 
                                             <div className='transition duration-300 ease-in-out'>
                                                 <a href={project.liveLink} target='_blank' rel='noopener noreferrer'>
-                                                    <button className='button-link md:text-lg text-sm hover:shadow-lg'>
-                                                        Live Link
+                                                    <button className='btn-prj md:text-lg text-sm hover:shadow-lg'>
+                                                    <FaLink size={28} />
                                                     </button>
                                                 </a>
                                             </div>
                                             <div className='transition duration-300 ease-in-out'>
                                                 <a href={project.codeLink} target='_blank' rel='noopener noreferrer'>
-                                                    <button className='button-link md:text-lg text-sm hover:shadow-lg'>
-                                                        View Code
+                                                    <button className='btn-prj md:text-lg text-sm hover:shadow-lg'>
+                                                    <FaCode size={28} />
                                                     </button>
                                                 </a>
                                             </div>

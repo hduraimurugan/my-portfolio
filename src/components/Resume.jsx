@@ -1,6 +1,8 @@
 import React from 'react'
 import ResumeImg from '../assets/resume.jpg'
 import { CiSaveDown2 } from "react-icons/ci";
+import { HiOutlineFolderDownload } from "react-icons/hi";
+
 import DuraiCV from "../assets/DuraiCV.pdf"
 
 const Resume = () => {
@@ -17,7 +19,7 @@ const Resume = () => {
                         <p className='text-gray-700  text-2xl font-list-font mt-10'>
                             You can download my resume here <br/> <br/>
                             <a href={DuraiCV} download='Durai_Resume' target='_blank' >
-                             <button className='flex flex-row md:text-2xl text-xl btn-dark'>Download Now<CiSaveDown2 size={28} /></button> 
+                             <button className='flex flex-row gap-2 items-center md:text-2xl text-xl btn-dark'>Download Now<HiOutlineFolderDownload size={29} /></button> 
                             </a>
                         </p>
                     </div>
