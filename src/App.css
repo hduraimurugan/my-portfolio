@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+.animate-typing {
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    width: 0;
+    animation:
+        typing 3.5s steps(40, end) forwards,
+        blink-caret .75s step-end infinite;
+} */
+
+
 
 @layer base {
     .font-outline-1 {
@@ -33,7 +54,11 @@ header ul li {
 .bg-secondary{
     /* background-color: rgb(23, 84, 227); */
     @apply bg-gradient-to-r from-blue-800 to-gray-900;
-    
+        
+}
+
+.card-hoverr-eff{
+    @apply md:hover:-translate-y-3 hover:cursor-pointer transition duration-300 ease-in-out;
 }
 
 .mobile-nav{

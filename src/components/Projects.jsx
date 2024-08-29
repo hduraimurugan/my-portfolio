@@ -8,7 +8,7 @@ import reduxImg from '../assets/reduxKart.png'
 import { FaLink } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
 
-const Projects = () => {
+const Projects = ({RevealOnScroll}) => {
 
     const projects = [
         {
@@ -65,8 +65,10 @@ const Projects = () => {
     return (
         <>
             <section className='flex flex-col px-10 py-32 bg-secondary justify-center text-white' id='projects'>
+
+            <RevealOnScroll>
                 <div className='py-5 md:px-24 px-10 md:w-full'>
-                    <div className='flex flex-col justify-center'>
+                    <div className='flex flex-col items-center justify-center'>
                         <h1 className='text-white font-bold md:text-4xl text-2xl font-list-font border-b-4 border-primary md:w-[140px] w-[100px]'>Projects</h1>
                         <p className='text-white md:text-2xl text-xl font-list-font mt-10'>Here are some of my projects, Check them out...</p>
                     </div>
@@ -78,7 +80,7 @@ const Projects = () => {
 
                         {projects.map((project, index) => (
 
-                            <div className='bg-border-prj'>
+                            <div className='bg-border-prj card-hoverr-eff'>
                                 <div className='relative' key={index}>
                                     <img
                                         className='md:h-[200px] h-[160px] w-[356px] rounded-lg'
@@ -122,6 +124,7 @@ const Projects = () => {
                     </div>
 
                 </div>
+                </RevealOnScroll>
             </section>
         </>
     )
