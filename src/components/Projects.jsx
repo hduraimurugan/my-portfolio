@@ -5,12 +5,20 @@ import routerDomImg from '../assets/routerDom.png'
 import shipKartImg from '../assets/shipKart.png'
 import LBMSImg from '../assets/LBMS.png'
 import reduxImg from '../assets/reduxKart.png'
+import reactImg from "../assets/reactQuiz.png"
 import { FaLink } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
 
 const Projects = ({RevealOnScroll}) => {
 
     const projects = [
+        {
+            imgSrc: reactImg,
+            description: "React Quiz App built using ReactJs, ContextApi",
+            liveLink: "https://quiz-context-api.vercel.app/",
+            codeLink: "https://github.com/hduraimurugan/quiz-ContextAPI-frontend",
+            codesUsed: ["React Js", "Context API"],
+        },
         {
             imgSrc: shipKartImg,
             description: "Ship-Kart is an E-commerce webpage built using ReactJs",
