@@ -61,8 +61,10 @@ function Skills({RevealOnScroll}) {
     return (
 
         
-        <section className='flex flex-col px-5 py-32 bg-primary justify-center' id='skills'>
+        <section className='bg-primary' id='skills'>
             <RevealOnScroll>
+
+                <div className='flex flex-col px-5 py-32 container mx-auto justify-center'> 
             <div className='flex justify-center px-10 py-5'>
                 <h1 className='text-white font-bold md:text-4xl text-xl font-list-font border-b-4 border-secondary md:w-[500px] w-[270px]'>
                     Skills & Technologies I Know
@@ -92,6 +94,7 @@ function Skills({RevealOnScroll}) {
                     </div>
                 </div>
             ))}
+            </div>
             </RevealOnScroll>
         </section>
        

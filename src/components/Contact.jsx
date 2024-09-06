@@ -50,7 +50,8 @@ const Contact = () => {
 
     return (
         <>
-            <section className='flex flex-col md:flex-row px-5 py-32 bg-primary justify-around' id='contact'>
+            <section className='bg-primary ' id='contact'>
+                <div className='flex flex-col md:flex-row px-5 py-32 container mx-auto justify-around'>
 
                 <div className='flex flex-col px-10 py-5 justify-center'>
                     
@@ -136,7 +137,7 @@ const Contact = () => {
                     <a href='https://www.instagram.com/duraimurugan_16/' target="_blank" className='hover:text-blue-950'><AiOutlineInstagram size={34} /></a>
                 </div> */}
               
-
+              </div>
             </section>
         </>
     );

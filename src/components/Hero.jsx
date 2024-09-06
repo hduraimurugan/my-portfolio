@@ -21,24 +21,24 @@ const Hero = () => {
                 // }}
                 id='hero'
             >
-                <div className='flex flex-col md:flex-row justify-center'>
+                <div className='flex flex-col md:flex-row justify-center container mx-auto'>
                     <div className='md:w-1/2 flex flex-col mt-10 mb-10'>
-                        <div className='text-white md:text-6xl text-3xl font-list-font drop-shadow-md w-max'>
-                            <h1 className='text-indigo-300 md:text-6xl text-5xl font-extrabold mb-3'>
+                        <div className='text-white font-list-font drop-shadow-md w-max'>
+                            <h1 className='text-indigo-300 md:text-4xl text-2xl font-extrabold mb-3'>
                                 Hi,
                             </h1>
-                            <h1 className='animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 md:text-6xl text-3xl text-white  font-list-font font-bold'>
+                            <h1 className='animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 md:text-5xl text-3xl text-white  font-list-font font-bold'>
                                 It's Duraimurugan H,</h1>
 
                             <p className='md:text-4xl text-xl mt-3'>
-                                I am a <span className='text-indigo-300 md:text-5xl text-2xl font-extrabold'>MERN</span> stack Developer
+                                I am a <span className='text-indigo-300 md:text-4xl text-2xl font-extrabold'>MERN</span> stack Developer
                             </p>
                         </div>
 
                         <div className='flex gap-5 mt-16 text-white drop-shadow-md'>
-                            <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='hover:text-indigo-400'><AiOutlineMedium size={34} /></a>
-                            <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='hover:text-indigo-400'><AiOutlineLinkedin size={34} /></a>
-                            <a href='https://github.com/hduraimurugan' target="_blank" className='hover:text-indigo-400'><AiOutlineGithub size={34} /></a>
+                            <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='hover:text-indigo-400'><AiOutlineMedium size={32} /></a>
+                            <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='hover:text-indigo-400'><AiOutlineLinkedin size={32} /></a>
+                            <a href='https://github.com/hduraimurugan' target="_blank" className='hover:text-indigo-400'><AiOutlineGithub size={32} /></a>
                             {/* <a href='https://x.com/hduraimurugan16' target="_blank" className='hover:text-indigo-400'><AiOutlineTwitter size={34} /></a> */}
                             {/* <a href='https://www.instagram.com/duraimurugan_16/' target="_blank" className='hover:text-indigo-400'><AiOutlineInstagram size={34} /></a> */}
                         </div>
