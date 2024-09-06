@@ -8,6 +8,7 @@ import Resume from './components/Resume'
 import Footer from './components/Footer'
 import Skills from './components/Skills'
 import { useEffect, useRef, useState }  from "react"
+import QualificationTimeline from './components/QualificationTimeline'
 
 const RevealOnScroll = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -49,7 +50,8 @@ function App() {
       <Skills RevealOnScroll={RevealOnScroll}/>
       <Projects RevealOnScroll={RevealOnScroll}/>
       <About RevealOnScroll={RevealOnScroll}/>
-      <Resume RevealOnScroll={RevealOnScroll}/>
+      {/* <Resume RevealOnScroll={RevealOnScroll}/> */}
+      <QualificationTimeline />
       <Contact RevealOnScroll={RevealOnScroll}/>
       <Footer RevealOnScroll={RevealOnScroll}/>
       </div>

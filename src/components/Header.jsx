@@ -27,8 +27,8 @@ const Header = () => {
                             onClick={() => toggleClass('#projects')}>Projects</a></li>
                         <li><a href='#about' className={activeLink === '#about' ? 'active' : ''}
                             onClick={() => toggleClass('#about')}>About</a></li>
-                        <li><a href='#resume' className={activeLink === '#resume' ? 'active' : ''}
-                            onClick={() => toggleClass('#resume')}>Resume</a></li>
+                        <li><a href='#qualification' className={activeLink === '#qualification' ? 'active' : ''}
+                            onClick={() => toggleClass('#qualification')}>Qualification</a></li>
                         <li><a href='#contact' className={activeLink === '#contact' ? 'active' : ''}
                             onClick={() => toggleClass('#contact')}>Contact</a></li>
                     </ul>
@@ -39,7 +39,7 @@ const Header = () => {
                         <a href='#skills'><li>Skills</li></a>
                         <a href='#projects'><li>Projects</li></a>
                         <a href='#about'><li>About</li></a>
-                        <a href='#resume'><li>Resume</li></a>
+                        <a href='#qualification'><li>Qualification</li></a>
                         <a href='#contact'><li>Contact</li></a>
                     </ul>
                 </nav>}

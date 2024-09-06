@@ -50,7 +50,7 @@ const Contact = () => {
 
     return (
         <>
-            <section className='flex flex-col md:flex-row px-5 py-32 bg-secondary justify-around' id='contact'>
+            <section className='flex flex-col md:flex-row px-5 py-32 bg-primary justify-around' id='contact'>
 
                 <div className='flex flex-col px-10 py-5 justify-center'>
                     
