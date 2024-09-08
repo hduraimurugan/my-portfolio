@@ -15,6 +15,7 @@ import githubImg from '../assets/skills/GitHub.png';
 import ViteImg from '../assets/skills/Vite.js.png';
 import MySQLImg from '../assets/skills/MySQL.png';
 import npmImg from '../assets/skills/NPM.png';
+import postmanImg from '../assets/skills/Postman.png';
 
 
 
@@ -50,6 +51,7 @@ const skillsData = [
             { name: 'Git', imgSrc: gitImg, skill: 85 },
             { name: 'GitHub', imgSrc: githubImg, skill: 90 },
             { name: 'NPM', imgSrc: npmImg, skill: 60},
+            { name: 'Postman', imgSrc: postmanImg, skill: 90},
         ],
     },
 ];
@@ -78,7 +80,7 @@ function Skills({RevealOnScroll}) {
                             {category.category}
                         </h3>
                     </div>
-                    <div className='flex md:flex-row flex-col flex-wrap items-center gap-5 md:justify-center py-2'>
+                    <div className='flex md:flex-row flex-wrap items-center justify-center gap-5 md:justify-center py-2'>
                         {category.skills.map((skill, idx) => (
                             <div key={idx} className='flex flex-col items-center justify-center gap-1 px-10 py-10 bg-gray-100 h-[192px] w-[144px] card-hoverr-eff rounded-lg shadow-md'>
                                 <img src={skill.imgSrc} className='mb-5 img-fluid' alt={skill.name} />
