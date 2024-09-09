@@ -6,12 +6,20 @@ import shipKartImg from '../assets/shipKart.png'
 import LBMSImg from '../assets/LBMS.png'
 import reduxImg from '../assets/reduxKart.png'
 import reactImg from "../assets/reactQuiz.png"
+import netflixImg from "../assets/netflix.png"
 import { FaLink } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
 
 const Projects = ({ RevealOnScroll }) => {
 
     const projects = [
+        {
+            imgSrc: netflixImg,
+            description: "Netflix Clone App using ReactJs, Firebase",
+            liveLink: "https://netflix-clone-durai.vercel.app/",
+            codeLink: "https://github.com/hduraimurugan/netflix-clone",
+            codesUsed: ["React Js", "Firebase"],
+        },
         {
             imgSrc: reactImg,
             description: "React Quiz App built using ReactJs, ContextApi",
@@ -26,14 +34,14 @@ const Projects = ({ RevealOnScroll }) => {
             codeLink: "https://github.com/hduraimurugan/cart-contextAPI",
             codesUsed: ["React Js", "Context API", "Tailwind CSS"],
         },
-        {
-            imgSrc: reduxImg,
-            description: "An E-commerce site built using ReactJs Redux toolkit",
-            liveLink: "https://redux-shopping-cart-mauve.vercel.app/",
-            codeLink: "https://github.com/hduraimurugan/redux-shopping-cart",
-            codesUsed: ["React Js", "Redux", "Bootstrap"],
+        // {
+        //     imgSrc: reduxImg,
+        //     description: "An E-commerce site built using ReactJs Redux toolkit",
+        //     liveLink: "https://redux-shopping-cart-mauve.vercel.app/",
+        //     codeLink: "https://github.com/hduraimurugan/redux-shopping-cart",
+        //     codesUsed: ["React Js", "Redux", "Bootstrap"],
 
-        },
+        // },
         {
             imgSrc: LBMSImg,
             description: "Library Admin dashboard built using ReactJs Formik",
@@ -50,14 +58,14 @@ const Projects = ({ RevealOnScroll }) => {
             codesUsed: ["React Js", "Bootstrap"],
 
         },
-        {
-            imgSrc: routerDomImg,
-            description: "It is a Courses webpage built using React Router Dom",
-            liveLink: "https://react-router-task-jdldaldada.netlify.app/",
-            codeLink: "https://github.com/hduraimurugan/react-router",
-            codesUsed: ["React Js", "React-router-Dom", "Bootstrap"],
+        // {
+        //     imgSrc: routerDomImg,
+        //     description: "It is a Courses webpage built using React Router Dom",
+        //     liveLink: "https://react-router-task-jdldaldada.netlify.app/",
+        //     codeLink: "https://github.com/hduraimurugan/react-router",
+        //     codesUsed: ["React Js", "React-router-Dom", "Bootstrap"],
 
-        },
+        // },
         {
             imgSrc: chessApiImg,
             description: "It is a Leaderboard website built using Javascript",

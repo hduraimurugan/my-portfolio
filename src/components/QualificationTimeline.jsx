@@ -13,7 +13,7 @@ const QualificationTimeline = () => {
     return (
         <section className="bg-secondary px-5 py-32" id='qualification'>
             <div className="flex flex-col items-center text-center container mx-auto py-10 px-5">
-                <h2 className="text-white font-bold md:text-4xl text-2xl font-list-font border-b-4 border-secondary md:w-[224px] w-[120px] mb-7">Qualification</h2>
+                <h2 className="text-white font-bold md:text-4xl text-2xl font-list-font border-b-4 border-secondary md:w-[224px] w-[160px] mb-7">Qualification</h2>
                 {/* <p className="text-gray-300 mt-1">My journey</p> */}
 
                 <div className="flex gap-7 mt-6 justify-center">
