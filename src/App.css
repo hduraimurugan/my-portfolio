@@ -37,14 +37,36 @@
     mix-blend-mode: multiply; 
 } */
 
-.magicpattern { 
-    width: 100%;
-    height: 100%;
-    background-size: cover;
+.magicpattern {
+    width: 80%;
+    height: 90%;
+    background-size: cover; /* Ensures the background covers the area */
     background-position: center center;
-    background-repeat: repeat;
+    background-repeat: no-repeat; /* Avoid repeating the pattern on small screens */
     background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22b%22%3E%3Cstop offset=%220%25%22 stop-color=%22%237b81f6%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%2367b8ee%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M809 629q-51 129-180 158.5t-288 30Q182 818 142 659t46-272q86-113 199-180t260.5-34.5q147.5 32.5 180 180T809 629Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22url(%23b)%22 d=%22M809 629q-51 129-180 158.5t-288 30Q182 818 142 659t46-272q86-113 199-180t260.5-34.5q147.5 32.5 180 180T809 629Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+/* Media Queries for Responsiveness */
+
+/* For smaller screens (up to 768px) */
+@media (max-width: 768px) {
+  .magicpattern {
+    background-size: 60%; /* Adjust size on smaller screens */
+    background-position: center center;
   }
+}
+
+/* For extra small screens (up to 480px) */
+@media (max-width: 480px) {
+  .magicpattern {
+    width: 100%;
+    height: 50%;
+    background-size: contain; /* Ensure the pattern fits within the container */
+    background-repeat: no-repeat;
+    background-position: center center; /* Adjust positioning for small devices */
+  }
+}
+
   
   
 header ul li {
