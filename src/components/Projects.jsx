@@ -16,7 +16,7 @@ const Projects = ({ RevealOnScroll }) => {
         {
             imgSrc: netflixImg,
             description: "Netflix Clone App using ReactJs, Firebase",
-            liveLink: "https://netflix-clone-durai.vercel.app/",
+            liveLink: "https://dubbflix-clone-for-edu-purpose-durai.vercel.app/",
             codeLink: "https://github.com/hduraimurugan/netflix-clone",
             codesUsed: ["React Js", "Firebase"],
         },

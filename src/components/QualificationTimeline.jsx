@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MdOutlineWork } from "react-icons/md";
 import { RiGraduationCapFill } from "react-icons/ri";
 
