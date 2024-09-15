@@ -7,6 +7,8 @@ import LBMSImg from '../assets/LBMS.png'
 import reduxImg from '../assets/reduxKart.png'
 import reactImg from "../assets/reactQuiz.png"
 import netflixImg from "../assets/netflix.png"
+import UrlShortner from '../assets/URLShortner.png'
+
 import { FaLink } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
 
@@ -15,6 +17,7 @@ const Projects = ({ RevealOnScroll }) => {
     const projects = [
         {
             imgSrc: netflixImg,
+            title:"Netflix Clone App",
             description: "Netflix Clone App using ReactJs, Firebase",
             liveLink: "https://dubbflix-clone-for-edu-purpose-durai.vercel.app/",
             codeLink: "https://github.com/hduraimurugan/netflix-clone",
@@ -22,36 +25,31 @@ const Projects = ({ RevealOnScroll }) => {
         },
         {
             imgSrc: reactImg,
+            title:"React Quiz App",
             description: "React Quiz App built using ReactJs, ContextApi",
             liveLink: "https://quiz-context-api.vercel.app/",
             codeLink: "https://github.com/hduraimurugan/quiz-ContextAPI-frontend",
             codesUsed: ["React Js", "Context API"],
         },
         {
+            imgSrc: UrlShortner,
+            title:"URL Shortener",
+            description: "Url shortener App using ReactJs with Authentication using NodeJS",
+            liveLink: "https://url-shortene.vercel.app//",
+            codeLink: "https://github.com/hduraimurugan/Login_URL_Shortener_FE",
+            codesUsed: ["React Js", "Node Js", "Mongo DB", "Express Js"],
+        },
+        {
             imgSrc: shipKartImg,
+            title:"Ship-Kart",
             description: "Ship-Kart is an E-commerce webpage built using ReactJs",
             liveLink: "https://cart-context-api-pied.vercel.app/",
             codeLink: "https://github.com/hduraimurugan/cart-contextAPI",
             codesUsed: ["React Js", "Context API", "Tailwind CSS"],
         },
-        // {
-        //     imgSrc: reduxImg,
-        //     description: "An E-commerce site built using ReactJs Redux toolkit",
-        //     liveLink: "https://redux-shopping-cart-mauve.vercel.app/",
-        //     codeLink: "https://github.com/hduraimurugan/redux-shopping-cart",
-        //     codesUsed: ["React Js", "Redux", "Bootstrap"],
-
-        // },
-        {
-            imgSrc: LBMSImg,
-            description: "Library Admin dashboard built using ReactJs Formik",
-            liveLink: "https://verdant-centaur-216ddb.netlify.app/",
-            codeLink: "https://github.com/hduraimurugan/formik_task",
-            codesUsed: ["React Js", "Formik", "Axios"],
-
-        },
         {
             imgSrc: zamazonImg,
+            title:"Zamazon",
             description: "Zamazon is an E-commerce webpage built using ReactJs",
             liveLink: "https://incandescent-vacherin-675899.netlify.app/",
             codeLink: "https://github.com/hduraimurugan/shopping-cart",
@@ -66,8 +64,25 @@ const Projects = ({ RevealOnScroll }) => {
         //     codesUsed: ["React Js", "React-router-Dom", "Bootstrap"],
 
         // },
+          // {
+        //     imgSrc: reduxImg,
+        //     description: "An E-commerce site built using ReactJs Redux toolkit",
+        //     liveLink: "https://redux-shopping-cart-mauve.vercel.app/",
+        //     codeLink: "https://github.com/hduraimurugan/redux-shopping-cart",
+        //     codesUsed: ["React Js", "Redux", "Bootstrap"],
+
+        // },
+        // {
+        //     imgSrc: LBMSImg,
+        //     description: "Library Admin dashboard built using ReactJs Formik",
+        //     liveLink: "https://verdant-centaur-216ddb.netlify.app/",
+        //     codeLink: "https://github.com/hduraimurugan/formik_task",
+        //     codesUsed: ["React Js", "Formik", "Axios"],
+
+        // },
         {
             imgSrc: chessApiImg,
+            title:"Chess Leaderboard",
             description: "It is a Leaderboard website built using Javascript",
             liveLink: "https://ornate-nasturtium-89e860.netlify.app/",
             codeLink: "https://github.com/hduraimurugan/chess-leaderboard",
@@ -93,17 +108,17 @@ const Projects = ({ RevealOnScroll }) => {
 
                         <div className='py-5 md:w-full '>
 
-                            <div className='flex flex-col md:flex-row flex-wrap items-center md:justify-center px-10 gap-7'>
+                            <div className='flex flex-col md:flex-row flex-wrap items-center md:justify-center px-10 gap-7 parent-container'>
 
                                 {projects.map((project, index) => (
 
-                                    <div className='bg-border-prj card-hoverr-eff'>
-                                        <div className='relative' key={index}>
+                                    <div className='bg-border-prj card-hoverr-eff card' key={index}>
+                                        <div className='relative' >
                                             <img
-                                                className='md:h-[200px] h-[160px] w-[356px] rounded-lg'
+                                                className='md:h-[200px] h-[160px] w-full rounded-lg object-cover img-prj'
                                                 src={project.imgSrc}
                                             />
-                                            <div className='project-desc flex flex-col justify-center gap-3 px-3 py-3 rounded-lg'>
+                                            <div className='project-desc card-content flex flex-col justify-center gap-3 px-3 py-3 rounded-lg'>
                                                 <div>
                                                     <p className='text-center text-white md:text-2xl text-md font-list-font'>
                                                         {project.description}
@@ -129,9 +144,13 @@ const Projects = ({ RevealOnScroll }) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='p-3 my-3 flex flex-row flex-wrap gap-2'>
+                                        <div>
+                                            {project.title && 
+                                            <h1 className='p-3 text-white md:text-2xl text-xl font-list-font font-semibold mt-1 drop-shadow-md'>{project.title}</h1>}
+                                        </div>
+                                        <div className='px-3 flex flex-row flex-wrap gap-2'>
                                             {project.codesUsed.map((code, idx) => (
-                                                <span key={idx} className='text-gray-200 md:text-md text-sm font-semibold bg-indigo-500 border-primary-2 p-2 rounded-lg shadow-lg mr-2'>{code}</span>
+                                                <span key={idx} className='text-gray-200 md:text-md text-sm font-semibold font-hero-font bg-indigo-500 border-primary-2 p-2 rounded-lg shadow-lg mr-2'>{code}</span>
                                             ))}
                                         </div>
 

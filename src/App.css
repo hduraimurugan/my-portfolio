@@ -22,6 +22,31 @@
         blink-caret .75s step-end infinite;
 } */
 
+.parent-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch; /* Ensures that all cards stretch to the same height */
+  }
+  
+  .card {
+    flex: 1 1 30%; /* Adjust the width of the card, e.g., 30% */
+    margin: 7px;
+    display: flex;
+    flex-direction: column;
+    min-height: 350px; /* Adjust to your desired minimum height */
+  }
+
+  /* .img-prj {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  } */
+  
+  .card-content {
+    flex-grow: 1;
+  }
+
 
 
 @layer base {
@@ -38,7 +63,7 @@
 } */
 
 .magicpattern {
-    width: 80%;
+    width: 77%;
     height: 90%;
     background-size: cover; /* Ensures the background covers the area */
     background-position: center center;
@@ -47,6 +72,32 @@
 }
 
 /* Media Queries for Responsiveness */
+@media (max-width: 1400px) {
+    .magicpattern {
+        width: 90%;
+        height: 80%;
+      background-size: cover; /* Adjust size on smaller screens */
+      background-position: center center;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .magicpattern {
+        width: 96%;
+        height: 61%;
+      background-size: 100%; /* Adjust size on smaller screens */
+      background-position: end end;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .magicpattern {
+        width: 100%;
+        height: 43%;
+      background-size: 77%; /* Adjust size on smaller screens */
+      background-position: center center;
+    }
+  }
 
 /* For smaller screens (up to 768px) */
 @media (max-width: 768px) {
@@ -60,7 +111,7 @@
 @media (max-width: 480px) {
   .magicpattern {
     width: 100%;
-    height: 50%;
+    height: 60%;
     background-size: contain; /* Ensure the pattern fits within the container */
     background-repeat: no-repeat;
     background-position: center center; /* Adjust positioning for small devices */
@@ -89,7 +140,7 @@ header ul li {
 }
 
 .card-hoverr-eff{
-    @apply md:hover:-translate-y-3 hover:cursor-pointer transition duration-300 ease-in-out;
+    @apply md:hover:-translate-y-3 hover:cursor-pointer transition duration-200 ease-in-out;
 }
 
 .mobile-nav{
@@ -107,19 +158,19 @@ header ul li {
 
 .button-link{
     /* @apply bg-gray-200 text-gray-900 font-bold font-list-font px-3 py-2 rounded-md hover:scale-105; */
-    @apply text-gray-900 font-semibold bg-gradient-to-r from-teal-400 to-blue-400 hover:from-blue-400 hover:to-teal-400 hover:text-white px-3 py-2  rounded-md drop-shadow-md;
+    @apply text-gray-900 font-semibold bg-gradient-to-r from-teal-400 to-blue-400 hover:from-blue-400 hover:to-teal-400 hover:text-white transition-colors ease-linear duration-200 px-3 py-2  rounded-md drop-shadow-md;
 
 }
 
 .btn-prj{
     /* @apply bg-gray-200 text-gray-900 font-bold font-list-font px-3 py-2 rounded-md hover:scale-105; */
-    @apply text-gray-900 font-semibold bg-gradient-to-r from-indigo-400 to-blue-400 hover:from-blue-400 hover:to-indigo-400 hover:text-white px-5 py-2  rounded-xl drop-shadow-md;
+    @apply text-gray-900 font-semibold bg-gradient-to-r from-indigo-400 to-blue-400 hover:from-blue-400 hover:to-indigo-400 hover:text-white transition-colors ease-linear duration-200 px-5 py-2  rounded-xl drop-shadow-md;
 
 }
 
 .btn-dark{
     /* @apply  text-white bg-gray-700 px-3 py-3 rounded-md hover:scale-105 drop-shadow-md; */
-    @apply text-white bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 px-3 py-3 rounded-md drop-shadow-md;
+    @apply text-white bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 transition-colors ease-linear duration-200 px-3 py-3 rounded-md drop-shadow-md;
 }
 
 /* .txt-gradient{
@@ -134,4 +185,8 @@ html{
     /* @apply bg-gray-200 text-gray-900 font-bold font-list-font px-3 py-2 rounded-md hover:scale-105; */
     @apply text-gray-900 bg-gradient-to-r from-indigo-700 to-blue-500 hover:from-blue-700 hover:to-indigo-400 hover:cursor-pointer p-2 rounded-lg drop-shadow-lg;
 
+}
+
+.btn-icons{
+    @apply hover:text-teal-500 transition-colors ease-linear drop-shadow-md
 }

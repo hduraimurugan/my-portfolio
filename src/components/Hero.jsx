@@ -1,9 +1,9 @@
 // import React from 'react';
-import HeroImg from '../assets/hero.png';
+// import HeroImg from '../assets/hero.png';
 // import Hero2Img from '../assets/hero2.png';
 import Hero3Img from '../assets/hero3.png';
 // import bgImg from '../assets/bg.gif';
-import { AiOutlineTwitter, AiOutlineLinkedin, AiOutlineGithub, AiOutlineMedium, AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineLinkedin, AiOutlineGithub, AiOutlineMedium } from "react-icons/ai";
 import { TbMessage } from "react-icons/tb";
 import { IoMdCloudDownload } from "react-icons/io";
 
@@ -23,11 +23,11 @@ const Hero = () => {
             >
                 <div className='flex flex-col md:flex-row justify-center container mx-auto'>
 
-                    <div className='flex md:flex-row flex-col md:w-1/2'>
-                        <div className='flex md:flex-col flex-row  text-gray-100 gap-7 drop-shadow-md px-16 items-center justify-center md:visible invisible'>
-                            <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='hover:text-indigo-400'><AiOutlineMedium size={32} /></a>
-                            <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='hover:text-indigo-400'><AiOutlineLinkedin size={32} /></a>
-                            <a href='https://github.com/hduraimurugan' target="_blank" className='hover:text-indigo-400'><AiOutlineGithub size={32} /></a>
+                    <div className='flex md:flex-row flex-col justify-center items-center md:w-1/2'>
+                        <div className='md:flex md:flex-col text-gray-100 gap-7 drop-shadow-md px-16 items-center justify-center hidden'>
+                            <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='btn-icons'><AiOutlineMedium size={32} /></a>
+                            <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='btn-icons'><AiOutlineLinkedin size={32} /></a>
+                            <a href='https://github.com/hduraimurugan' target="_blank" className='btn-icons'><AiOutlineGithub size={32} /></a>
                         </div>
 
                         <div className='flex flex-col mt-10 mb-10'>
@@ -49,9 +49,9 @@ const Hero = () => {
 
                             <div className='flex gap-5 mt-7 text-white drop-shadow-md md:invisible visible'>
 
-                                <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='hover:text-indigo-400'><AiOutlineMedium size={32} /></a>
-                                <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='hover:text-indigo-400'><AiOutlineLinkedin size={32} /></a>
-                                <a href='https://github.com/hduraimurugan' target="_blank" className='hover:text-indigo-400'><AiOutlineGithub size={32} /></a>
+                                <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='btn-icons'><AiOutlineMedium size={32} /></a>
+                                <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='btn-icons'><AiOutlineLinkedin size={32} /></a>
+                                <a href='https://github.com/hduraimurugan' target="_blank" className='btn-icons'><AiOutlineGithub size={32} /></a>
 
                                 {/* <a href='https://x.com/hduraimurugan16' target="_blank" className='hover:text-indigo-400'><AiOutlineTwitter size={34} /></a> */}
                                 {/* <a href='https://www.instagram.com/duraimurugan_16/' target="_blank" className='hover:text-indigo-400'><AiOutlineInstagram size={34} /></a> */}

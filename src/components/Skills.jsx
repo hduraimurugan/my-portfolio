@@ -1,4 +1,3 @@
-import React from 'react';
 import bootstrap from '../assets/skills/bootstrap.png';
 import css from '../assets/skills/css.png';
 import html from '../assets/skills/html.png';
