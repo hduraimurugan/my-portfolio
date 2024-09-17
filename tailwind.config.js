@@ -1,3 +1,6 @@
+import tailwindFilters from 'tailwindcss-filters';
+
+
 export default {
   content: [
     "./index.html",
@@ -43,5 +46,7 @@ export default {
       'row-font': 'Rowdies',
     }
   },
-  plugins: [],
+  plugins: [
+    tailwindFilters,
+  ],
 }

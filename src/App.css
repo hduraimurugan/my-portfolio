@@ -130,12 +130,12 @@ header ul li {
 
 .bg-primary{
     /* background-color: rgb(19, 31, 189); */
-    @apply bg-gradient-to-r from-blue-800 to-indigo-950;
+    @apply bg-gradient-to-r from-blue-900 to-indigo-950;
 }
 
 .bg-secondary{
     /* background-color: rgb(23, 84, 227); */
-    @apply bg-gradient-to-r from-blue-800 to-gray-900;
+    @apply bg-gradient-to-r from-blue-900 to-gray-900;
         
 }
 
@@ -188,5 +188,5 @@ html{
 }
 
 .btn-icons{
-    @apply hover:text-teal-500 transition-colors ease-linear drop-shadow-md
+    @apply hover:text-teal-500 transition-colors ease-linear drop-shadow-md 
 }

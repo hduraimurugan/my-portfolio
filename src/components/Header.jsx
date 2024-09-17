@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Bars3Icon } from '@heroicons/react/24/solid'
 
 const Header = () => {
@@ -15,9 +15,9 @@ const Header = () => {
 
     return (
         <>
-            <header className='bg-primary fixed w-full top-0 left-0 z-50'>
+            <header className='bg-primary fixed w-full top-0 left-0 z-50 shadow-md opacity-95'>
 
-                <div className='flex justify-around items-center py-7 container mx-auto'>
+                <div className='flex justify-around items-center py-7 container mx-auto '>
                     <a className='text-white text-2xl font-row-font' href='#'>Duraimurugan H</a>
                     <nav className='hidden md:block'>
                         <ul className='flex text-white font-list-font'>

@@ -34,7 +34,7 @@ const Projects = ({ RevealOnScroll }) => {
         {
             imgSrc: UrlShortner,
             title:"URL Shortener",
-            description: "Url shortener App using ReactJs with Authentication using NodeJS",
+            description: "Url shortener App with Authentication",
             liveLink: "https://url-shortene.vercel.app//",
             codeLink: "https://github.com/hduraimurugan/Login_URL_Shortener_FE",
             codesUsed: ["React Js", "Node Js", "Mongo DB", "Express Js"],
@@ -108,7 +108,7 @@ const Projects = ({ RevealOnScroll }) => {
 
                         <div className='py-5 md:w-full '>
 
-                            <div className='flex flex-col md:flex-row flex-wrap items-center md:justify-center px-10 gap-7 parent-container'>
+                            <div className='flex flex-col md:flex-row flex-wrap items-center md:justify-center px-10  gap-7 parent-container'>
 
                                 {projects.map((project, index) => (
 
