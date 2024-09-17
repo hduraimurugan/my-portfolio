@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import { Bars3Icon } from '@heroicons/react/24/solid'
+import { PiAlignRightFill } from "react-icons/pi";
+import { PiAlignRightDuotone } from "react-icons/pi";
+import { SiDevpost } from "react-icons/si";
 
 const Header = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -15,10 +18,10 @@ const Header = () => {
 
     return (
         <>
-            <header className='bg-primary fixed w-full top-0 left-0 z-50 shadow-md opacity-95'>
+            <header className='bg-primary fixed w-full top-0 left-0 z-50 shadow-md backdrop-filter backdrop-blur-sm'>
 
                 <div className='flex justify-around items-center py-7 container mx-auto '>
-                    <a className='text-white text-2xl font-row-font' href='#'>Duraimurugan H</a>
+                    <a className='text-white text-2xl font-row-font flex items-center gap-0.5' href='#'><SiDevpost size={32}/>uraimurugan H</a>
                     <nav className='hidden md:block'>
                         <ul className='flex text-white font-list-font'>
                             <li><a href='#' className={activeLink === '#' ? 'active' : ''}
@@ -36,16 +39,19 @@ const Header = () => {
                         </ul>
                     </nav>
                     {toggleMenu && <nav className='block md:hidden'>
-                        <ul className='flex flex-col text-white mobile-nav font-list-font' onClick={handleLinkClick}>
-                            <a href='#'><li>Home</li></a>
-                            <a href='#skills'><li>Skills</li></a>
-                            <a href='#projects'><li>Projects</li></a>
-                            <a href='#about'><li>About</li></a>
-                            <a href='#qualification'><li>Qualification</li></a>
-                            <a href='#contact'><li>Contact</li></a>
-                        </ul>
+                        <div className='flex flex-col text-white mobile-nav font-list-font' onClick={handleLinkClick}>
+                            <a href='#'>Home</a>
+                            <a href='#skills'>Skills</a>
+                            <a href='#projects'>Projects</a>
+                            <a href='#about'>About</a>
+                            <a href='#qualification'>Qualification</a>
+                            <a href='#contact'>Contact</a>
+                        </div>
                     </nav>}
-                    <button onClick={() => setToggleMenu(!toggleMenu)} className='block md:hidden'><Bars3Icon className='text-white h-7' /></button>
+                    <button onClick={() => setToggleMenu(!toggleMenu)} className='block md:hidden'>
+                        {toggleMenu ? <PiAlignRightFill size={34} className='text-white h-7' /> : <PiAlignRightDuotone size={34} className='text-white h-7' />}
+                      
+                    </button>
                 </div>
             </header>
         </>

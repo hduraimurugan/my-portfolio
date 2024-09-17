@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { IoIosSend } from "react-icons/io";
-import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
+import { TbMailFilled } from "react-icons/tb";
 
 
 const Contact = () => {
@@ -51,7 +51,7 @@ const Contact = () => {
     return (
         <>
             <section className='bg-primary ' id='contact'>
-                <div className='flex flex-col md:flex-row px-5 py-32 container mx-auto justify-around'>
+                <div className='flex flex-col md:flex-row px-5 py-32 container mx-auto justify-center items-center'>
 
                 <div className='flex flex-col px-10 py-5 justify-center'>
                     
@@ -121,7 +121,7 @@ const Contact = () => {
 
                         <div className='flex justify-center w-full'>
                             <button className='text-gray-900 md:text-2xl text-xl font-list-font button-link mt-5 flex gap-1 items-center justify-center' type="submit" disabled={state.submitting}>
-                                <IoIosSend size={28} />Send Message
+                                Send Message <TbMailFilled size={28}/>
                             </button>
                         </div>
                     </form>

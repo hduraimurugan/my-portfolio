@@ -75,7 +75,7 @@ function Skills({ RevealOnScroll }) {
             <RevealOnScroll>
                 <div className='flex flex-col px-5 py-32 container mx-auto justify-center'>
                     <div className='flex justify-center px-10 py-5'>
-                        <h1 className='text-white font-bold md:text-4xl text-xl font-list-font border-b-4 border-secondary md:w-[500px] w-[270px]'>
+                        <h1 className='text-white text-center font-bold md:text-4xl text-md font-list-font border-b-4 border-secondary md:w-[500px] w-[270px]'>
                             Skills & Technologies I Know
                         </h1>
                     </div>
@@ -83,7 +83,7 @@ function Skills({ RevealOnScroll }) {
                     {skillsData.map((category, index) => (
                         <div key={index}>
                             <div className='flex justify-center px-10 mb-5 mt-10'>
-                                <h3 className='text-white font-bold md:text-2xl text-xl font-list-font border-b-4 border-secondary'>
+                                <h3 className='text-white font-bold md:text-2xl text-md font-list-font border-b-4 border-secondary'>
                                     {category.category}
                                 </h3>
                             </div>
