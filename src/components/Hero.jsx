@@ -26,9 +26,9 @@ const Hero = () => {
 
                     <div className='flex md:flex-row flex-col justify-center items-center md:w-1/2'>
                         <div className='md:flex md:flex-col text-gray-100 gap-7 drop-shadow-md px-16 items-center justify-center hidden'>
-                            <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='btn-icons'><FaLinkedin size={32} /></a>
-                            <a href='https://github.com/hduraimurugan' target="_blank" className='btn-icons'><AiOutlineGithub size={32} /></a>
-                            <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='btn-icons'><AiOutlineMedium size={32} /></a>
+                            <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='btn-icons'><FaLinkedin size={30} /></a>
+                            <a href='https://github.com/hduraimurugan' target="_blank" className='btn-icons'><AiOutlineGithub size={30} /></a>
+                            <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='btn-icons'><AiOutlineMedium size={30} /></a>
                         </div>
 
                         <div className='flex flex-col mt-10 mb-10'>
@@ -50,9 +50,9 @@ const Hero = () => {
 
                             <div className='flex gap-5 mt-7 text-white drop-shadow-md md:hidden'>
 
-                                <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='btn-icons'><FaLinkedin size={32} /></a>
-                                <a href='https://github.com/hduraimurugan' target="_blank" className='btn-icons'><AiOutlineGithub size={32} /></a>
-                                <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='btn-icons'><AiOutlineMedium size={32} /></a>
+                                <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='btn-icons'><FaLinkedin size={25} /></a>
+                                <a href='https://github.com/hduraimurugan' target="_blank" className='btn-icons'><AiOutlineGithub size={25} /></a>
+                                <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='btn-icons'><AiOutlineMedium size={25} /></a>
 
                                 {/* <a href='https://x.com/hduraimurugan16' target="_blank" className='hover:text-indigo-400'><AiOutlineTwitter size={34} /></a> */}
                                 {/* <a href='https://www.instagram.com/duraimurugan_16/' target="_blank" className='hover:text-indigo-400'><AiOutlineInstagram size={34} /></a> */}
