@@ -8,6 +8,7 @@ import reduxImg from '../assets/reduxKart.png'
 import reactImg from "../assets/reactQuiz.png"
 import netflixImg from "../assets/netflix.png"
 import UrlShortner from '../assets/URLShortner.png'
+import JobPortal from '../assets/JobPortal.png'
 
 import { FaLink } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
@@ -15,6 +16,14 @@ import { FaCode } from "react-icons/fa";
 const Projects = ({ RevealOnScroll }) => {
 
     const projects = [
+        {
+            imgSrc: JobPortal,
+            title:"College Job Portal",
+            description: "College Job portal is a MERN Full stack project",
+            liveLink: "https://cpp-frontend.vercel.app/",
+            codeLink: "https://github.com/hduraimurugan/cpp_frontend/",
+            codesUsed: ["React Js", "Redux", "NodeJs", "MongoDB"],
+        },
         {
             imgSrc: netflixImg,
             title:"Netflix Clone App",
@@ -47,15 +56,15 @@ const Projects = ({ RevealOnScroll }) => {
             codeLink: "https://github.com/hduraimurugan/cart-contextAPI",
             codesUsed: ["React Js", "Context API", "Tailwind CSS"],
         },
-        {
-            imgSrc: zamazonImg,
-            title:"Zamazon",
-            description: "Zamazon is an E-commerce webpage built using ReactJs",
-            liveLink: "https://incandescent-vacherin-675899.netlify.app/",
-            codeLink: "https://github.com/hduraimurugan/shopping-cart",
-            codesUsed: ["React Js", "Bootstrap"],
+        // {
+        //     imgSrc: zamazonImg,
+        //     title:"Zamazon",
+        //     description: "Zamazon is an E-commerce webpage built using ReactJs",
+        //     liveLink: "https://incandescent-vacherin-675899.netlify.app/",
+        //     codeLink: "https://github.com/hduraimurugan/shopping-cart",
+        //     codesUsed: ["React Js", "Bootstrap"],
 
-        },
+        // },
         // {
         //     imgSrc: routerDomImg,
         //     description: "It is a Courses webpage built using React Router Dom",
