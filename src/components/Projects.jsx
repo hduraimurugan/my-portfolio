@@ -13,12 +13,22 @@ import JobPortal from '../assets/JobPortal.png'
 import { FaLink } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
 
+import { Card, CardContent } from "@/components/ui/card"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
+
 const Projects = ({ RevealOnScroll }) => {
 
     const projects = [
         {
             imgSrc: JobPortal,
-            title:"College Job Portal",
+            title: "College Job Portal",
             description: "College Job portal is a MERN Full stack project",
             liveLink: "https://cpp-frontend.vercel.app/",
             codeLink: "https://github.com/hduraimurugan/cpp_frontend/",
@@ -26,31 +36,31 @@ const Projects = ({ RevealOnScroll }) => {
         },
         {
             imgSrc: netflixImg,
-            title:"Netflix Clone App",
+            title: "Netflix Clone App",
             description: "Netflix Clone App using ReactJs, Firebase",
             liveLink: "https://dubbflix-clone-for-edu-purpose-durai.vercel.app/",
             codeLink: "https://github.com/hduraimurugan/netflix-clone",
             codesUsed: ["React Js", "Firebase"],
         },
         {
-            imgSrc: reactImg,
-            title:"React Quiz App",
-            description: "React Quiz App built using ReactJs, ContextApi",
-            liveLink: "https://quiz-context-api.vercel.app/",
-            codeLink: "https://github.com/hduraimurugan/quiz-ContextAPI-frontend",
-            codesUsed: ["React Js", "Context API"],
-        },
-        {
             imgSrc: UrlShortner,
-            title:"URL Shortener",
+            title: "URL Shortener",
             description: "Url shortener App with Authentication",
             liveLink: "https://url-shortene.vercel.app//",
             codeLink: "https://github.com/hduraimurugan/Login_URL_Shortener_FE",
             codesUsed: ["React Js", "Node Js", "Mongo DB", "Express Js"],
         },
         {
+            imgSrc: reactImg,
+            title: "React Quiz App",
+            description: "React Quiz App built using ReactJs, ContextApi",
+            liveLink: "https://quiz-context-api.vercel.app/",
+            codeLink: "https://github.com/hduraimurugan/quiz-ContextAPI-frontend",
+            codesUsed: ["React Js", "Context API"],
+        },
+        {
             imgSrc: shipKartImg,
-            title:"Ship-Kart",
+            title: "Ship-Kart",
             description: "Ship-Kart is an E-commerce webpage built using ReactJs",
             liveLink: "https://cart-context-api-pied.vercel.app/",
             codeLink: "https://github.com/hduraimurugan/cart-contextAPI",
@@ -73,7 +83,7 @@ const Projects = ({ RevealOnScroll }) => {
         //     codesUsed: ["React Js", "React-router-Dom", "Bootstrap"],
 
         // },
-          // {
+        // {
         //     imgSrc: reduxImg,
         //     description: "An E-commerce site built using ReactJs Redux toolkit",
         //     liveLink: "https://redux-shopping-cart-mauve.vercel.app/",
@@ -91,7 +101,7 @@ const Projects = ({ RevealOnScroll }) => {
         // },
         {
             imgSrc: chessApiImg,
-            title:"Chess Leaderboard",
+            title: "Chess Leaderboard",
             description: "It is a Leaderboard website built using Javascript",
             liveLink: "https://ornate-nasturtium-89e860.netlify.app/",
             codeLink: "https://github.com/hduraimurugan/chess-leaderboard",
@@ -118,8 +128,71 @@ const Projects = ({ RevealOnScroll }) => {
                         <div className='py-5 md:w-full '>
 
                             <div className='flex flex-col md:flex-row flex-wrap items-center md:justify-center px-10  gap-7 parent-container'>
+                                <Carousel
+                                    opts={{
+                                        align: "start",
+                                    }}
+                                    plugins={[
+                                        Autoplay({
+                                          delay: 4000,
+                                        }),
+                                      ]}
+                                    className="w-full"
+                                >
+                                    <CarouselContent>
+                                        {projects.map((project, index) => (
+                                            <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/3">
+                                                <div className='bg-border-prj card-hoverr-eff card' key={index}>
+                                                    <div className='relative' >
+                                                        <img
+                                                            className='md:h-[200px] h-[160px] w-full rounded-lg object-cover img-prj'
+                                                            src={project.imgSrc}
+                                                        />
+                                                        <div className='project-desc card-content flex flex-col justify-center gap-3 px-3 py-3 rounded-lg'>
+                                                            <div>
+                                                                <p className='text-center text-white md:text-2xl text-md font-list-font'>
+                                                                    {project.description}
+                                                                </p>
+                                                            </div>
+                                                            <div className='flex justify-center md:gap-7 gap-3'>
 
-                                {projects.map((project, index) => (
+                                                                <div className='transition duration-300 ease-in-out'>
+                                                                    <a href={project.liveLink} target='_blank' rel='noopener noreferrer'>
+                                                                        <button className='btn-prj md:text-lg text-sm hover:shadow-lg'>
+                                                                            <FaLink size={28} />
+                                                                        </button>
+                                                                    </a>
+                                                                </div>
+                                                                <div className='transition duration-300 ease-in-out'>
+                                                                    <a href={project.codeLink} target='_blank' rel='noopener noreferrer'>
+                                                                        <button className='btn-prj md:text-lg text-sm hover:shadow-lg'>
+                                                                            <FaCode size={28} />
+                                                                        </button>
+                                                                    </a>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        {project.title &&
+                                                            <h1 className='p-3 text-white md:text-2xl text-xl font-list-font font-semibold mt-1 drop-shadow-md'>{project.title}</h1>}
+                                                    </div>
+                                                    <div className='px-3 flex flex-row flex-wrap gap-2'>
+                                                        {project.codesUsed.map((code, idx) => (
+                                                            <span key={idx} className='text-gray-200 md:text-md text-sm font-semibold font-hero-font bg-indigo-500 border-primary-2 p-2 rounded-lg shadow-lg mr-2'>{code}</span>
+                                                        ))}
+                                                    </div>
+
+                                                </div>
+                                            </CarouselItem>
+                                        ))}
+                                    </CarouselContent>
+                                    <CarouselPrevious className="bg-blue-900" />
+                                    <CarouselNext className="bg-blue-950"/>
+                                </Carousel>
+
+                                {/* {projects.map((project, index) => (
 
                                     <div className='bg-border-prj card-hoverr-eff card' key={index}>
                                         <div className='relative' >
@@ -154,8 +227,8 @@ const Projects = ({ RevealOnScroll }) => {
                                             </div>
                                         </div>
                                         <div>
-                                            {project.title && 
-                                            <h1 className='p-3 text-white md:text-2xl text-xl font-list-font font-semibold mt-1 drop-shadow-md'>{project.title}</h1>}
+                                            {project.title &&
+                                                <h1 className='p-3 text-white md:text-2xl text-xl font-list-font font-semibold mt-1 drop-shadow-md'>{project.title}</h1>}
                                         </div>
                                         <div className='px-3 flex flex-row flex-wrap gap-2'>
                                             {project.codesUsed.map((code, idx) => (
@@ -164,7 +237,7 @@ const Projects = ({ RevealOnScroll }) => {
                                         </div>
 
                                     </div>
-                                ))}
+                                ))} */}
 
                             </div>
 
