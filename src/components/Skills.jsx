@@ -33,6 +33,8 @@ import { FaGithub } from "react-icons/fa6";
 import { SiNpm } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
 
+import { motion } from "framer-motion";
+
 
 const skillsData = [
     {
@@ -42,17 +44,17 @@ const skillsData = [
             { name: 'CSS', imgSrc: css, icon: FaCss3Alt, skill: 95 },
             { name: 'JavaScript', imgSrc: js, icon: IoLogoJavascript, skill: 85 },
             { name: 'React', imgSrc: react, icon: FaReact, skill: 90 },
-            { name: 'Redux', imgSrc: reduxImg, icon: SiRedux, skill: 60 },
-            { name: 'Bootstrap', imgSrc: bootstrap, icon: FaBootstrap, skill: 80 },
+            { name: 'Redux', imgSrc: reduxImg, icon: SiRedux, skill: 72 },
+            { name: 'Bootstrap', imgSrc: bootstrap, icon: FaBootstrap, skill: 85 },
             { name: 'Tailwind', imgSrc: tailwindImg, icon: RiTailwindCssFill, skill: 90 },
         ],
     },
     {
         category: 'Back-end',
         skills: [
-            { name: 'NodeJs', imgSrc: nodejs, icon: FaNodeJs, skill: 80 },
-            { name: 'ExpressJs', imgSrc: expressImg, icon: SiExpress, skill: 70 },
-            { name: 'MongoDB', imgSrc: mongoDB, icon: SiMongodb, skill: 75 },
+            { name: 'NodeJs', imgSrc: nodejs, icon: FaNodeJs, skill: 85 },
+            { name: 'ExpressJs', imgSrc: expressImg, icon: SiExpress, skill: 80 },
+            { name: 'MongoDB', imgSrc: mongoDB, icon: SiMongodb, skill: 85 },
             { name: 'MySQL', imgSrc: MySQLImg, icon: GrMysql, skill: 60 },
         ],
     },
@@ -89,7 +91,14 @@ function Skills({ RevealOnScroll }) {
                             </div>
                             <div className='flex md:flex-row flex-wrap items-center justify-center gap-5 md:justify-center py-2'>
                                 {category.skills.map((skill, idx) => (
-                                    <div
+                                    <motion.div
+                                    className="box"
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                    key={idx}
+                                >
+                                   <div
                                         key={idx}
                                         className='flex flex-col items-center justify-center gap-1 px-7 py-7 bg-gray-100 md:h-[154px] md:w-[115px] w-[90px] card-hoverr-eff rounded-lg shadow-md'
                                     >
@@ -114,6 +123,7 @@ function Skills({ RevealOnScroll }) {
                                             ></div>
                                         </div>
                                     </div>
+                                    </motion.div>
                                 ))}
                             </div>
                         </div>

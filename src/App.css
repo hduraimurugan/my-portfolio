@@ -193,7 +193,7 @@ header ul li {
 }
 
 .card-hoverr-eff{
-    @apply md:hover:-translate-y-1 hover:cursor-pointer transition duration-200 ease-in-out;
+    @apply  hover:cursor-pointer;
 }
 
 .mobile-nav{

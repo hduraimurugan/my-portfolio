@@ -8,6 +8,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { TbMessage } from "react-icons/tb";
 import { IoMdCloudDownload } from "react-icons/io";
 
+import { motion } from "framer-motion";
+
 
 
 const Hero = () => {
@@ -61,11 +63,25 @@ const Hero = () => {
 
                             <div className='flex justify-start drop-shadow-md mt-10'>
                                 <div className='flex gap-2 items-center font-bold'>
+                                    <motion.div
+                                        className="box"
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.9 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                    >
                                     <a className='btn-prj font-list-font text-md py-3 px-5 rounded-full flex gap-1 items-center' href='#contact'>Contact <TbMessage size={25} /></a>
+                                    </motion.div>
+                                    <motion.div
+                                        className="box"
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.9 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                    >
                                     <a className='btn-prj font-list-font text-md py-3 px-5 rounded-full flex gap-1 items-center'
                                         href='https://docs.google.com/document/d/1nzY9FRHrUO1ORzvCTA9O5vb1bOvDWCdxEhAUn4T1Pg8/edit'
                                         target='_blank'
                                     >Resume <IoMdCloudDownload size={25} /></a>
+                                    </motion.div>
                                 </div>
                             </div>
 
