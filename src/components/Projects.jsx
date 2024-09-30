@@ -200,7 +200,7 @@ const Projects = ({ RevealOnScroll }) => {
                                                         </div>
                                                         <div className='px-3 flex flex-row flex-wrap gap-2'>
                                                             {project.codesUsed.map((code, idx) => (
-                                                                <span key={idx} className='text-gray-200 md:text-md text-sm font-semibold font-hero-font bg-indigo-500 border-primary-2 p-2 rounded-lg shadow-lg mr-2'>{code}</span>
+                                                                <span key={idx} className='text-gray-200 md:text-md text-xs font-semibold font-hero-font bg-indigo-500 border-primary-2 p-2 rounded-lg shadow-lg mr-2'>{code}</span>
                                                             ))}
                                                         </div>
 

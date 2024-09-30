@@ -77,7 +77,7 @@ function Skills({ RevealOnScroll }) {
             <RevealOnScroll>
                 <div className='flex flex-col px-5 py-32 container mx-auto justify-center'>
                     <div className='flex justify-center px-10 py-5'>
-                        <h1 className='text-white text-center font-bold md:text-4xl text-md font-list-font border-b-4 border-secondary md:w-[500px] w-[270px]'>
+                        <h1 className='text-white text-center font-bold md:text-4xl text-md font-list-font border-b-4 border-secondary md:w-[500px] w-[230px]'>
                             Skills & Technologies I Know
                         </h1>
                     </div>
