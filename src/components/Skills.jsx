@@ -110,15 +110,15 @@ function Skills({ RevealOnScroll }) {
                                         /> */}
 
                                         {/* For mobile, display icons */}
-                                        <skill.icon  className="md:text-4xl text-3xl text-indigo-700" />
+                                        <skill.icon  className="md:text-4xl text-3xl text-blue-800" />
 
-                                        <p className='text-indigo-700 text-center font-bold md:text-lg text-sm font-list-font mt-2'>
+                                        <p className='text-blue-800 text-center font-bold md:text-lg text-sm font-list-font mt-2'>
                                             {skill.name}
                                         </p>
 
                                         <div className="w-full bg-gray-400 rounded-full h-1.5 mt-2">
                                             <div
-                                                className="bg-indigo-700 h-1.5 rounded-full"
+                                                className="bg-blue-800 h-1.5 rounded-full"
                                                 style={{ width: `${skill.skill}%` }}
                                             ></div>
                                         </div>

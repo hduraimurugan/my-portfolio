@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { IoIosSend } from "react-icons/io";
 import { TbMailFilled } from "react-icons/tb";
-
+import { motion } from "framer-motion";
 
 const Contact = () => {
     const [state, handleSubmit] = useForm("xblryqrr");
@@ -120,9 +120,17 @@ const Contact = () => {
                         </div>
 
                         <div className='flex justify-center w-full'>
+                        <motion.div
+                                    className="box"
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                    
+                                >
                             <button className='text-gray-900 md:text-2xl text-xl font-list-font button-link mt-5 flex gap-1 items-center justify-center' type="submit" disabled={state.submitting}>
                                 Send Message <TbMailFilled size={28}/>
                             </button>
+                            </motion.div>
                         </div>
                     </form>
 
