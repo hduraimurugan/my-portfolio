@@ -34,39 +34,72 @@ import { SiNpm } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
 
 import { motion } from "framer-motion";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
 
 
 const skillsData = [
     {
         category: 'Front-end',
         skills: [
-            { name: 'HTML', imgSrc: html, icon: FaHtml5, skill: 90 },
-            { name: 'CSS', imgSrc: css, icon: FaCss3Alt, skill: 95 },
-            { name: 'JavaScript', imgSrc: js, icon: IoLogoJavascript, skill: 85 },
-            { name: 'React', imgSrc: react, icon: FaReact, skill: 90 },
-            { name: 'Redux', imgSrc: reduxImg, icon: SiRedux, skill: 72 },
-            { name: 'Bootstrap', imgSrc: bootstrap, icon: FaBootstrap, skill: 85 },
-            { name: 'Tailwind', imgSrc: tailwindImg, icon: RiTailwindCssFill, skill: 90 },
+            {
+                name: 'HTML', imgSrc: html, icon: FaHtml5, skill: 90,
+                certificate: "https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727700779/GuviCertification_-_HTML_ingx0m.png"
+            },
+            {
+                name: 'CSS', imgSrc: css, icon: FaCss3Alt, skill: 95,
+                certificate: "https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727700780/GuviCertification_-_CSS_dvlb7m.png"
+            },
+            {
+                name: 'JavaScript', imgSrc: js, icon: IoLogoJavascript, skill: 85,
+                certificate: "https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727700779/GuviCertification_-_Js_b5kc6b.png"
+            },
+            {
+                name: 'React', imgSrc: react, icon: FaReact, skill: 90,
+                certificate: "https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727700779/GuviCertification_-_ReactJs_yznldy.png"
+            },
+            { name: 'Redux', imgSrc: reduxImg, icon: SiRedux, skill: 72, certificate: "" },
+            {
+                name: 'Bootstrap', imgSrc: bootstrap, icon: FaBootstrap, skill: 85,
+                certificate: "https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727700779/GuviCertification_-_Bootstrap_lvdwfx.png"
+            },
+            { name: 'Tailwind', imgSrc: tailwindImg, icon: RiTailwindCssFill, skill: 90, certificate: "" },
         ],
     },
     {
         category: 'Back-end',
         skills: [
-            { name: 'NodeJs', imgSrc: nodejs, icon: FaNodeJs, skill: 85 },
-            { name: 'ExpressJs', imgSrc: expressImg, icon: SiExpress, skill: 80 },
-            { name: 'MongoDB', imgSrc: mongoDB, icon: SiMongodb, skill: 85 },
-            { name: 'MySQL', imgSrc: MySQLImg, icon: GrMysql, skill: 60 },
+            {
+                name: 'NodeJs', imgSrc: nodejs, icon: FaNodeJs, skill: 85,
+                certificate: "https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727700779/GuviCertification_-_NodeJs_r0aunb.png"
+            },
+            { name: 'ExpressJs', imgSrc: expressImg, icon: SiExpress, skill: 80, certificate: "" },
+            {
+                name: 'MongoDB', imgSrc: mongoDB, icon: SiMongodb, skill: 85,
+                certificate: "https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727700779/GuviCertification_Mongodb_ddip9w.png"
+            },
+            {
+                name: 'MySQL', imgSrc: MySQLImg, icon: GrMysql, skill: 60,
+                certificate: "https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727700779/GuviCertification_-_MySQL_nxa4y0.png"
+            },
         ],
     },
     {
         category: 'Tools Known',
         skills: [
-            { name: 'VsCode', imgSrc: vsCodeImg, icon: VscVscode, skill: 90 },
-            { name: 'ViteJs', imgSrc: ViteImg, icon: SiVite, skill: 75 },
-            { name: 'Git', imgSrc: gitImg, icon: FaGitAlt, skill: 85 },
-            { name: 'GitHub', imgSrc: githubImg, icon: FaGithub, skill: 90 },
-            { name: 'NPM', imgSrc: npmImg, icon: SiNpm, skill: 60 },
-            { name: 'Postman', imgSrc: postmanImg, icon: SiPostman, skill: 90 },
+            { name: 'VsCode', imgSrc: vsCodeImg, icon: VscVscode, skill: 90, certificate: "" },
+            { name: 'ViteJs', imgSrc: ViteImg, icon: SiVite, skill: 75, certificate: "" },
+            { name: 'Git', imgSrc: gitImg, icon: FaGitAlt, skill: 85, certificate: "" },
+            { name: 'GitHub', imgSrc: githubImg, icon: FaGithub, skill: 90, certificate: "" },
+            { name: 'NPM', imgSrc: npmImg, icon: SiNpm, skill: 60, certificate: "" },
+            { name: 'Postman', imgSrc: postmanImg, icon: SiPostman, skill: 90, certificate: "" },
         ],
     },
 ];
@@ -89,48 +122,69 @@ function Skills({ RevealOnScroll }) {
                                     {category.category}
                                 </h3>
                             </div>
+
+
                             <div className='flex md:flex-row flex-wrap items-center justify-center gap-5 md:justify-center py-2'>
                                 {category.skills.map((skill, idx) => (
                                     <motion.div
-                                    className="box"
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                                    key={idx}
-                                >
-                                   <div
+                                        className="box"
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.9 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
                                         key={idx}
-                                        className='flex flex-col items-center justify-center gap-1 px-7 py-7 bg-gray-100 md:h-[154px] md:w-[115px] w-[90px] card-hoverr-eff rounded-lg shadow-md'
                                     >
-                                        {/* For desktop, display images */}
-                                        {/* <img
-                                            src={skill.imgSrc}
-                                            className='mb-5 object-cover hidden md:block'
-                                            alt={skill.name}
-                                        /> */}
+                                        <Dialog>
+                                            <DialogTrigger asChild>
+                                                <div
+                                                    key={idx}
+                                                    className='flex flex-col items-center justify-center gap-1 px-7 py-7 bg-gray-100 md:h-[154px] md:w-[115px] w-[90px] card-hoverr-eff rounded-lg shadow-md'
+                                                >
+                                                    <skill.icon className="md:text-4xl text-3xl text-blue-800" />
 
-                                        {/* For mobile, display icons */}
-                                        <skill.icon  className="md:text-4xl text-3xl text-blue-800" />
 
-                                        <p className='text-blue-800 text-center font-bold md:text-lg text-sm font-list-font mt-2'>
-                                            {skill.name}
-                                        </p>
+                                                    <p className='text-blue-800 text-center font-bold md:text-lg text-sm font-list-font mt-2'>
+                                                        {skill.name}
+                                                    </p>
 
-                                        <div className="w-full bg-gray-400 rounded-full h-1.5 mt-2">
-                                            <div
-                                                className="bg-blue-800 h-1.5 rounded-full"
-                                                style={{ width: `${skill.skill}%` }}
-                                            ></div>
-                                        </div>
-                                    </div>
+                                                    <div className="w-full bg-gray-400 rounded-full h-1.5 mt-2">
+                                                        <div
+                                                            className="bg-blue-800 h-1.5 rounded-full"
+                                                            style={{ width: `${skill.skill}%` }}
+                                                        ></div>
+                                                    </div>
+
+                                                </div>
+                                            </DialogTrigger>
+
+                                            <DialogContent className="sm:max-w-[700px] p-5">
+                                                <DialogHeader>
+                                                    {/* <DialogTitle>{skill.name}</DialogTitle> */}
+                                                </DialogHeader>
+                                                {skill.certificate ? (
+                                                    <div className="w-full">
+                                                        <img src={skill.certificate} />
+                                                    </div>
+                                                ) : <div className="w-full">
+                                                    <h1 className='font-list-font text-xl font-bold text-center p-10'>Certificate not yet availed...</h1>
+                                                </div>}
+                                            </DialogContent>
+
+                                        </Dialog>
                                     </motion.div>
+
                                 ))}
                             </div>
+
+
+
+
+
+
                         </div>
                     ))}
                 </div>
             </RevealOnScroll>
-        </section>
+        </section >
     );
 }
 

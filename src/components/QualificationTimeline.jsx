@@ -4,6 +4,16 @@ import { RiGraduationCapFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+
 const QualificationTimeline = () => {
     const [isEducation, setIsEducation] = useState(true); // default to Education view
 
@@ -36,6 +46,84 @@ const QualificationTimeline = () => {
                     {isEducation ? (
                         // Education Timeline
                         <div>
+                            <div className="flex items-start space-x-2 mb-10">
+                                <Dialog>
+                                    <DialogTrigger asChild>
+                                        <motion.div
+                                            className="box w-full hover:cursor-pointer"
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.9 }}
+                                            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+
+                                        >
+                                            <div className="bg-gray-100 p-4 rounded-lg shadow-md w-full">
+                                                <h3 className="text-lg font-medium">MERN Full Stack Development</h3>
+                                                <p className="text-gray-600">Guvi Geek Network, IIT Madras</p>
+                                                <span className="text-sm text-gray-500">2024</span>
+                                            </div>
+
+                                        </motion.div>
+                                    </DialogTrigger>
+                                    <DialogContent className="sm:max-w-[700px] p-5">
+                                        <div className="w-full">
+                                            <img src="https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727700779/GuviCertification_-_FSD_kyw8pm.png" />
+                                        </div>
+                                    </DialogContent>
+                                </Dialog>
+                            </div>
+
+                            <div className="flex items-start space-x-2 mb-10">
+                            <Dialog>
+                            <DialogTrigger asChild>
+                                <motion.div
+                                    className="box w-full hover:cursor-pointer"
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+
+                                >
+                                        <div className="bg-gray-100 p-4 rounded-lg shadow-md w-full">
+                                            <h3 className="text-lg font-medium">Bachelor of Technology in Electronics and Instrumentation Engineering</h3>
+                                            <p className="text-gray-600">Kalasalingam Academy of Research Education</p>
+                                            <span className="text-sm text-gray-500">2016 - 2020</span>
+                                        </div>
+                                </motion.div>
+                                </DialogTrigger>
+                                    <DialogContent className="sm:max-w-[600px] p-5">
+                                        <div className="w-full">
+                                            <img src="https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727680241/Degree_Provision_and_TC_PDF_page-0001_in0wjn.jpg" />
+                                        </div>
+                                    </DialogContent>
+                                </Dialog>
+                            </div>
+
+                            <div className="flex items-start space-x-2 mb-10">
+                            <Dialog>
+                            <DialogTrigger asChild>
+                                <motion.div
+                                    className="box w-full hover:cursor-pointer"
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+
+                                > <div className="bg-gray-100 p-4 rounded-lg shadow-md w-full">
+                                            <h3 className="text-lg font-medium">Higher Secondary Education</h3>
+                                            <p className="text-gray-600">Rosemary Matric Higher Secondary School</p>
+                                            <span className="text-sm text-gray-500">2015 - 2016</span>
+                                        </div>
+                                </motion.div>
+                                </DialogTrigger>
+                                    <DialogContent className="sm:max-w-[600px] p-5">
+                                        <div className="w-full">
+                                            <img src="https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727680175/12th_School_All_Marksheets_page-0002_bjrczd.jpg" />
+                                        </div>
+                                    </DialogContent>
+                                </Dialog>
+                            </div>
+                        </div>
+                    ) : (
+                        // Work Timeline
+                        <div>
                             <div className="flex items-start space-x-4 mb-10">
                                 <motion.div
                                     className="box w-full hover:cursor-pointer"
@@ -45,61 +133,10 @@ const QualificationTimeline = () => {
 
                                 >
                                     <div className="bg-gray-100 p-4 rounded-lg shadow-md w-full">
-                                        <h3 className="text-lg font-medium">MERN Full Stack Development</h3>
-                                        <p className="text-gray-600">Guvi Geek Network, IIT Madras</p>
-                                        <span className="text-sm text-gray-500">2024</span>
+                                        <h3 className="text-lg font-medium">Relationship Manager</h3>
+                                        <p className="text-gray-600">City Union Bank Private Limited, Bangalore</p>
+                                        <span className="text-sm text-gray-500">2022 - 2024</span>
                                     </div>
-                                </motion.div>
-                            </div>
-
-                            <div className="flex items-start space-x-4 mb-10">
-                            <motion.div
-                                    className="box w-full hover:cursor-pointer"
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-
-                                ><a href="https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727680241/Degree_Provision_and_TC_PDF_page-0001_in0wjn.jpg" target='_blank'>
-                                <div className="bg-gray-100 p-4 rounded-lg shadow-md w-full">
-                                    <h3 className="text-lg font-medium">Bachelor of Technology in Electronics and Instrumentation Engineering</h3>
-                                    <p className="text-gray-600">Kalasalingam Academy of Research Education</p>
-                                    <span className="text-sm text-gray-500">2016 - 2020</span>
-                                </div></a>
-                                </motion.div>
-                            </div>
-
-                            <div className="flex items-start space-x-4 mb-10">
-                            <motion.div
-                                    className="box w-full hover:cursor-pointer"
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-
-                                ><a href='https://res.cloudinary.com/dmuz0dq5b/image/upload/v1727680175/12th_School_All_Marksheets_page-0002_bjrczd.jpg' target='_blank'>
-                                <div className="bg-gray-100 p-4 rounded-lg shadow-md w-full">
-                                    <h3 className="text-lg font-medium">Higher Secondary Education</h3>
-                                    <p className="text-gray-600">Rosemary Matric Higher Secondary School</p>
-                                    <span className="text-sm text-gray-500">2015 - 2016</span>
-                                </div></a>
-                                </motion.div>
-                            </div>
-                        </div>
-                    ) : (
-                        // Work Timeline
-                        <div>
-                            <div className="flex items-start space-x-4 mb-10">
-                            <motion.div
-                                    className="box w-full hover:cursor-pointer"
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-
-                                >
-                                <div className="bg-gray-100 p-4 rounded-lg shadow-md w-full">
-                                    <h3 className="text-lg font-medium">Relationship Manager</h3>
-                                    <p className="text-gray-600">City Union Bank Private Limited, Bangalore</p>
-                                    <span className="text-sm text-gray-500">2022 - 2024</span>
-                                </div>
                                 </motion.div>
                             </div>
 

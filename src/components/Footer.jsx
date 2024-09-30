@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
 
           <div className='text-gray-400 font-list-font text-center flex justify-center items-center'>
-            <a href="https://github.com/hduraimurugan" target="_blank" className="hover:text-gray-200">&copy;Duraimurugan</a> Portfolio 2024
+            <a href="https://github.com/hduraimurugan" target="_blank" className="hover:text-gray-200">&copy;Duraimurugan Portfolio</a> <span>. 2024</span>
             </div>
         </div>
       </section>
