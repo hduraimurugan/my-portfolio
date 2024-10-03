@@ -37,6 +37,7 @@ export default {
   		},
   		backgroundImage: {
 			'hero-pattern': "url('./src/assets/backdrop.jpg')",
+			'cosmos': "url('https://r4.wallpaperflare.com/wallpaper/199/471/657/sci-fi-milky-way-earth-from-space-wallpaper-92a1a2601dd6defb8a18e2f510180972.jpg')"
 		  },
   		borderRadius: {
   			lg: 'var(--radius)',

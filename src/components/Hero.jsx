@@ -16,7 +16,7 @@ const Hero = () => {
     return (
         <>
             <section
-                className='px-10 py-40 bg-secondary '
+                className='px-10 md:py-40 py-20 bg-secondary opacity-95'
                 // style={{
                 //     backgroundImage: `url(${bgImg})`,
                 //     backgroundSize: "cover",
@@ -24,7 +24,7 @@ const Hero = () => {
                 // }}
                 id='hero'
             >
-                <div className='flex flex-col md:flex-row justify-center container mx-auto'>
+                <div className='flex flex-col md:flex-row md:mt-1 mt-16 justify-center container mx-auto'>
 
                     <div className='flex md:flex-row flex-col justify-center items-center md:w-1/2'>
                         <div className='md:flex md:flex-col text-gray-100 gap-7 drop-shadow-md px-16 items-center justify-center hidden'>

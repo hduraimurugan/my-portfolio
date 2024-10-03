@@ -44,7 +44,7 @@ const RevealOnScroll = ({ children }) => {
 function App() {
   return (
     <>
-      <div className='App'>
+      <div className='App bg-cosmos'>
       <Header/>
       <Hero RevealOnScroll={RevealOnScroll}/>
       <Skills RevealOnScroll={RevealOnScroll}/>

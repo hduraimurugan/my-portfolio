@@ -106,7 +106,7 @@ const skillsData = [
 
 function Skills({ RevealOnScroll }) {
     return (
-        <section className='bg-primary shadow-lg' id='skills'>
+        <section className='bg-primary shadow-lg opacity-95' id='skills'>
             <RevealOnScroll>
                 <div className='flex flex-col px-5 py-32 container mx-auto justify-center'>
                     <div className='flex justify-center px-10 py-5'>

@@ -50,7 +50,7 @@ const Contact = () => {
 
     return (
         <>
-            <section className='bg-primary ' id='contact'>
+            <section className='bg-primary opacity-95' id='contact'>
                 <div className='flex flex-col md:flex-row px-5 py-32 container mx-auto justify-center items-center'>
 
                 <div className='flex flex-col px-10 py-5 justify-center'>
