@@ -9,6 +9,7 @@ import reactImg from "../assets/reactQuiz.png"
 import netflixImg from "../assets/netflix.png"
 import UrlShortner from '../assets/URLShortner.png'
 import JobPortal from '../assets/JobPortal.png'
+import TwitterImg from '../assets/Twitter.png'
 
 import { FaLink } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
@@ -33,6 +34,14 @@ const Projects = ({ RevealOnScroll }) => {
             liveLink: "https://cpp-frontend.vercel.app/",
             codeLink: "https://github.com/hduraimurugan/cpp_frontend/",
             codesUsed: ["React Js", "Redux", "NodeJs", "MongoDB"],
+        },
+        {
+            imgSrc: TwitterImg,
+            title: "X Clone App",
+            description: "MERN Fullstack X Clone App",
+            liveLink: "https://twitter-clone-app-fgba.onrender.com/",
+            codeLink: "https://github.com/hduraimurugan/twitter-clone-app",
+            codesUsed: ["React Js", "NodeJs", "MongoDB", "React Query"],
         },
         {
             imgSrc: netflixImg,
