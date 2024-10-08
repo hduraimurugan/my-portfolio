@@ -123,7 +123,7 @@ const Projects = ({ RevealOnScroll }) => {
 
     return (
         <>
-            <section className='bg-secondary opacity-95 text-white' id='projects'>
+            <section className='bg-primary opacity-95 text-white' id='projects'>
 
                 <RevealOnScroll>
                     <div className='flex flex-col px-10 py-32 justify-center container mx-auto'>

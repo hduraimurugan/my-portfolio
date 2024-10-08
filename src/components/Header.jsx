@@ -30,17 +30,17 @@ const Header = () => {
             <header className='bg-primary fixed w-full top-0 left-0 z-50 shadow-md backdrop-filter backdrop-blur-sm opacity-95'>
 
                 <div className='flex justify-around items-center py-7 container mx-auto '>
-                    <a className='text-white text-2xl font-row-font flex items-center gap-0.5' href='#'><SiDevpost size={32} />uraimurugan H</a>
+                    <a className='text-white md:text-2xl text-xl font-row-font flex items-center gap-0.5' href='#'><SiDevpost className='md:text-3xl text-2xl' />uraimurugan H</a>
                     <nav className='hidden md:block'>
                         <ul className='flex text-white font-list-font'>
                             <li><a href='#' className={activeLink === '#' ? 'active' : ''}
                                 onClick={() => toggleClass('#')} >Home</a></li>
+                            <li><a href='#about' className={activeLink === '#about' ? 'active' : ''}
+                                onClick={() => toggleClass('#about')}>About</a></li>
                             <li><a href='#skills' className={activeLink === '#skills' ? 'active' : ''}
                                 onClick={() => toggleClass('#skills')}>Skills</a></li>
                             <li><a href='#projects' className={activeLink === '#projects' ? 'active' : ''}
                                 onClick={() => toggleClass('#projects')}>Projects</a></li>
-                            <li><a href='#about' className={activeLink === '#about' ? 'active' : ''}
-                                onClick={() => toggleClass('#about')}>About</a></li>
                             <li><a href='#qualification' className={activeLink === '#qualification' ? 'active' : ''}
                                 onClick={() => toggleClass('#qualification')}>Qualification</a></li>
                             <li><a href='#contact' className={activeLink === '#contact' ? 'active' : ''}
@@ -53,6 +53,10 @@ const Header = () => {
                                 <HiHome size={24} />
                                 <span className='mt-2'>Home</span>
                             </a>
+                            <a href='#about'>
+                                <IoPersonSharp size={24} />
+                                <span className='mt-2'>About</span> 
+                            </a>
                             <a href='#skills'>
                                 <GiSkills size={24} />
                                 <span className='mt-2'>Skills</span>
@@ -60,10 +64,6 @@ const Header = () => {
                             <a href='#projects'>
                                 <LuLink size={24} />
                                 <span className='mt-2'>Projects</span>
-                            </a>
-                            <a href='#about'>
-                                <IoPersonSharp size={24} />
-                                <span className='mt-2'>About</span> 
                             </a>
                             <a href='#qualification'>
                                 <FaGraduationCap size={24} />

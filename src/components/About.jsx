@@ -6,7 +6,7 @@ const About = () => {
         <>
             <section className='bg-primary opacity-95' id='about'>
                 <div className='flex flex-col md:flex-row px-5 py-32 container mx-auto justify-center'>
-                    <div className='py-5 px-10 md:w-1/2 '>
+                    <div className='py-5 px-10 md:w-1/2'>
                         <img src={AboutImg} alt='hero' />
                     </div>
 

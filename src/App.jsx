@@ -47,9 +47,9 @@ function App() {
       <div className='App bg-cosmos'>
       <Header/>
       <Hero RevealOnScroll={RevealOnScroll}/>
+      <About RevealOnScroll={RevealOnScroll}/>
       <Skills RevealOnScroll={RevealOnScroll}/>
       <Projects RevealOnScroll={RevealOnScroll}/>
-      <About RevealOnScroll={RevealOnScroll}/>
       {/* <Resume RevealOnScroll={RevealOnScroll}/> */}
       <QualificationTimeline />
       <Contact RevealOnScroll={RevealOnScroll}/>
