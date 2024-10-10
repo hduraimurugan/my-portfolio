@@ -27,7 +27,7 @@ const Header = () => {
 
     return (
         <>
-            <header className='bg-primary fixed w-full top-0 left-0 z-50 shadow-md backdrop-filter backdrop-blur-sm opacity-95'>
+            <header className='fixed w-full top-0 left-0 z-10 shadow-md backdrop-filter backdrop-blur-md'>
 
                 <div className='flex justify-around items-center py-7 container mx-auto '>
                     <a className='text-white md:text-2xl text-xl font-row-font flex items-center gap-0.5' href='#'><SiDevpost className='md:text-3xl text-2xl' />uraimurugan H</a>
