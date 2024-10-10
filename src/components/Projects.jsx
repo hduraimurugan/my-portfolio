@@ -29,8 +29,8 @@ const Projects = ({ RevealOnScroll }) => {
     const projects = [
         {
             imgSrc: JobPortal,
-            title: "College Job Portal",
-            description: "College Job portal is a MERN Full stack project",
+            title: "College Placement Portal",
+            description: "College Placement portal is a MERN Full stack project",
             liveLink: "https://cpp-frontend.vercel.app/",
             codeLink: "https://github.com/hduraimurugan/cpp_frontend/",
             codesUsed: ["React Js", "Redux", "NodeJs", "MongoDB"],
