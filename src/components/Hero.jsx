@@ -9,10 +9,17 @@ import { TbMessage } from "react-icons/tb";
 import { IoMdCloudDownload } from "react-icons/io";
 
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer'
 
 
 
 const Hero = () => {
+
+    const { ref, inView } = useInView({
+        triggerOnce: true, // The animation runs only once when it first comes into view
+        threshold: 0.1, // Animation triggers when 10% of the element is visible
+    });
+
     return (
         <>
             <section
@@ -22,15 +29,39 @@ const Hero = () => {
                 //     backgroundSize: "cover",
                 //     backgroundRepeat: "no-repeat",
                 // }}
-                id='hero'
+                id='hero' ref={ref}
             >
                 <div className='flex flex-col md:flex-row md:mt-1 mt-16 justify-center container mx-auto'>
 
                     <div className='flex md:flex-row flex-col justify-center items-center md:w-1/2'>
                         <div className='md:flex md:flex-col text-gray-100 gap-7 drop-shadow-md px-16 items-center justify-center hidden'>
+                        <motion.div
+                                    ref={ref}
+                                    initial={{ opacity: 0, y: 100 }}
+                                    animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                                    exit={{ opacity: 0, y: -100 }}
+                                    transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5 }}
+                                >
                             <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='btn-icons'><FaLinkedin size={30} /></a>
+                            </motion.div>
+                            <motion.div
+                                    ref={ref}
+                                    initial={{ opacity: 0, y: 100 }}
+                                    animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                                    exit={{ opacity: 0, y: -100 }}
+                                    transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay:0.2 }}
+                                >
                             <a href='https://github.com/hduraimurugan' target="_blank" className='btn-icons'><AiOutlineGithub size={30} /></a>
+                            </motion.div>
+                            <motion.div
+                                    ref={ref}
+                                    initial={{ opacity: 0, y: 100 }}
+                                    animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                                    exit={{ opacity: 0, y: -100 }}
+                                    transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay:0.3 }}
+                                >
                             <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='btn-icons'><AiOutlineMedium size={30} /></a>
+                            </motion.div>
                         </div>
 
                         <div className='flex flex-col mt-10 mb-10'>
@@ -51,10 +82,33 @@ const Hero = () => {
                             </div>
 
                             <div className='flex gap-5 mt-7 text-white drop-shadow-md md:hidden'>
-
-                                <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='btn-icons'><FaLinkedin size={25} /></a>
-                                <a href='https://github.com/hduraimurugan' target="_blank" className='btn-icons'><AiOutlineGithub size={25} /></a>
-                                <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='btn-icons'><AiOutlineMedium size={25} /></a>
+                                <motion.div
+                                    ref={ref}
+                                    initial={{ opacity: 0, y: 100 }}
+                                    animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                                    exit={{ opacity: 0, y: -100 }}
+                                    transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5 }}
+                                >
+                                    <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='btn-icons'><FaLinkedin size={25} /></a>
+                                </motion.div>
+                                <motion.div
+                                    ref={ref}
+                                    initial={{ opacity: 0, y: 100 }}
+                                    animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                                    exit={{ opacity: 0, y: -100 }}
+                                    transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay: 0.2 }}
+                                >
+                                    <a href='https://github.com/hduraimurugan' target="_blank" className='btn-icons'><AiOutlineGithub size={25} /></a>
+                                </motion.div>
+                                <motion.div
+                                    ref={ref}
+                                    initial={{ opacity: 0, y: 100 }}
+                                    animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                                    exit={{ opacity: 0, y: -100 }}
+                                    transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay: 0.3}}
+                                >
+                                    <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='btn-icons'><AiOutlineMedium size={25} /></a>
+                                </motion.div>
 
                                 {/* <a href='https://x.com/hduraimurugan16' target="_blank" className='hover:text-indigo-400'><AiOutlineTwitter size={34} /></a> */}
                                 {/* <a href='https://www.instagram.com/duraimurugan_16/' target="_blank" className='hover:text-indigo-400'><AiOutlineInstagram size={34} /></a> */}
@@ -62,27 +116,35 @@ const Hero = () => {
 
 
                             <div className='flex justify-start drop-shadow-md mt-10'>
+
                                 <div className='flex gap-2 items-center font-bold'>
                                     <motion.div
                                         className="box"
+                                        initial={{ opacity: 0, y: 100 }}
+                                        animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                                        exit={{ opacity: 0, y: -100 }}
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.9 }}
-                                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 10, duration: 0.5 }}
                                     >
-                                    <a className='btn-prj font-list-font text-md py-3 px-5 rounded-full flex gap-1 items-center' href='#contact'>Contact <TbMessage size={25} /></a>
+                                        <a className='btn-prj font-list-font text-md py-3 px-5 rounded-full flex gap-1 items-center' href='#contact'>Contact <TbMessage size={25} /></a>
                                     </motion.div>
                                     <motion.div
                                         className="box"
+                                        initial={{ opacity: 0, y: 100 }}
+                                        animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                                        exit={{ opacity: 0, y: -100 }}
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.9 }}
-                                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 10, duration: 0.5, delay: 0.1 }}
                                     >
-                                    <a className='btn-prj font-list-font text-md py-3 px-5 rounded-full flex gap-1 items-center'
-                                        href='https://docs.google.com/document/d/1nzY9FRHrUO1ORzvCTA9O5vb1bOvDWCdxEhAUn4T1Pg8/edit'
-                                        target='_blank'
-                                    >Resume <IoMdCloudDownload size={25} /></a>
+                                        <a className='btn-prj font-list-font text-md py-3 px-5 rounded-full flex gap-1 items-center'
+                                            href='https://docs.google.com/document/d/1nzY9FRHrUO1ORzvCTA9O5vb1bOvDWCdxEhAUn4T1Pg8/edit'
+                                            target='_blank'
+                                        >Resume <IoMdCloudDownload size={25} /></a>
                                     </motion.div>
                                 </div>
+
                             </div>
 
                         </div>
@@ -90,9 +152,11 @@ const Hero = () => {
                     </div>
 
                     <div className='flex items-center justify-center md:w-1/3'>
+
                         <div className='flex magicpattern mix-blend-lighten md:relative'>
                             <img className='h-auto max-w-full md:absolute md:bottom-12' src={Hero3Img} alt='hero' />
                         </div>
+
                     </div>
 
                 </div>

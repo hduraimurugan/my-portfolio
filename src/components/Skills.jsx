@@ -34,6 +34,7 @@ import { SiNpm } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
 
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer'
 import {
     Dialog,
     DialogContent,
@@ -105,18 +106,24 @@ const skillsData = [
 ];
 
 function Skills({ RevealOnScroll }) {
+
+    const { ref, inView } = useInView({
+        triggerOnce: true, // The animation runs only once when it first comes into view
+        threshold: 0.1, // Animation triggers when 10% of the element is visible
+    });
+
     return (
         <section className='bg-secondary shadow-lg opacity-95' id='skills'>
             <RevealOnScroll>
-                <div className='flex flex-col px-5 py-32 container mx-auto justify-center'>
-                    <div className='flex justify-center px-10 py-5'>
+                <div className='flex flex-col px-5 py-32 container mx-auto justify-center' >
+                    <div className='flex justify-center px-10 py-5' ref={ref}>
                         <h1 className='text-white text-center font-bold md:text-4xl text-md font-list-font border-b-4 border-secondary md:w-[500px] w-[230px]'>
                             Skills & Technologies I Know
                         </h1>
                     </div>
 
                     {skillsData.map((category, index) => (
-                        <div key={index}>
+                        <div key={index} >
                             <div className='flex justify-center px-10 mb-5 mt-10'>
                                 <h3 className='text-white font-bold md:text-2xl text-md font-list-font border-b-4 border-secondary'>
                                     {category.category}
@@ -130,7 +137,10 @@ function Skills({ RevealOnScroll }) {
                                         className="box"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.9 }}
-                                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 10, duration: 0.5, delay: idx * 0.1 }}
+                                        initial={{ opacity: 0, y: 100 }}
+                                        animate={inView ? { opacity: 1, y: 0 }: {}}
+                                        exit={{ opacity: 0, y: -100 }}
                                         key={idx}
                                     >
                                         <Dialog>
