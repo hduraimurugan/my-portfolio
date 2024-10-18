@@ -23,10 +23,11 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
+import { Link } from 'react-router-dom'
 
 
 const Projects = ({ RevealOnScroll }) => {
-    
+
     const { ref, inView } = useInView({
         triggerOnce: true, // The animation runs only once when it first comes into view
         threshold: 0.1, // Animation triggers when 10% of the element is visible
@@ -159,71 +160,75 @@ const Projects = ({ RevealOnScroll }) => {
                                             <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/3">
                                                 <motion.div
                                                     className="box"
-                                                    whileHover={{ scale: 1.03 }}
-                                                    whileTap={{ scale: 0.9 }}
-                                                    // transition={{ type: "spring", stiffness: 200, damping: 10 }}
                                                     initial={{ opacity: 0, y: 100 }}
                                                     animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
                                                     exit={{ opacity: 0, y: -100 }}
-                                                    transition={{ type: "spring", stiffness: 400, damping: 10, duration: 0.5, delay: index*0.1 }}
+                                                    transition={{ type: "spring", stiffness: 400, damping: 10, duration: 0.5, delay: index * 0.1 }}
                                                 >
-                                                    <div className='bg-border-prj card-hoverr-eff card' key={index}>
-                                                        <div className='relative' >
-                                                            <img
-                                                                className='md:h-[200px] h-[160px] w-full rounded-lg object-cover img-prj'
-                                                                src={project.imgSrc}
-                                                            />
-                                                            <div className='project-desc card-content flex flex-col justify-center gap-3 px-3 py-3 rounded-lg'>
-                                                                <div>
-                                                                    <p className='text-center text-white md:text-2xl text-md font-list-font'>
-                                                                        {project.description}
-                                                                    </p>
-                                                                </div>
-                                                                <div className='flex justify-center md:gap-7 gap-3'>
+                                                    <a href={project.liveLink} target='_blank'>
+                                                        <motion.div className='bg-border-prj card-hoverr-eff card'
+                                                            whileHover={{ scale: 1.03 }}
+                                                            whileTap={{ scale: 0.9 }}
+                                                            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                                                            key={index}>
 
-                                                                    <div className='transition duration-300 ease-in-out'>
-                                                                        <a href={project.liveLink} target='_blank' rel='noopener noreferrer'>
-                                                                            <motion.div
-                                                                                className="box"
-                                                                                whileHover={{ scale: 1.05 }}
-                                                                                whileTap={{ scale: 0.9 }}
-                                                                                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                                                                            >
-                                                                                <button className='btn-prj md:text-lg text-sm hover:shadow-lg'>
-                                                                                    <FaLink size={28} />
-                                                                                </button>
-                                                                            </motion.div>
-                                                                        </a>
+                                                            <div className='relative' >
+                                                                <img
+                                                                    className='md:h-[200px] h-[160px] w-full rounded-lg object-cover img-prj'
+                                                                    src={project.imgSrc}
+                                                                />
+                                                                <div className='project-desc card-content flex flex-col justify-center gap-3 px-3 py-3 rounded-lg'>
+                                                                    <div>
+                                                                        <p className='text-center text-white md:text-2xl text-md font-list-font'>
+                                                                            {project.description}
+                                                                        </p>
                                                                     </div>
-                                                                    <div className='transition duration-300 ease-in-out'>
-                                                                        <a href={project.codeLink} target='_blank' rel='noopener noreferrer'>
-                                                                            <motion.div
-                                                                                className="box"
-                                                                                whileHover={{ scale: 1.05 }}
-                                                                                whileTap={{ scale: 0.9 }}
-                                                                                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                                                                            >
-                                                                                <button className='btn-prj md:text-lg text-sm hover:shadow-lg'>
-                                                                                    <FaCode size={28} />
-                                                                                </button>
-                                                                            </motion.div>
-                                                                        </a>
-                                                                    </div>
+                                                                    <div className='flex justify-center md:gap-7 gap-3'>
 
+                                                                        <div className='transition duration-300 ease-in-out'>
+                                                                            <a href={project.liveLink} target='_blank' rel='noopener noreferrer'>
+                                                                                <motion.div
+                                                                                    className="box"
+                                                                                    whileHover={{ scale: 1.05 }}
+                                                                                    whileTap={{ scale: 0.9 }}
+                                                                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                                                                >
+                                                                                    <button className='btn-prj md:text-lg text-sm hover:shadow-lg'>
+                                                                                        <FaLink size={28} />
+                                                                                    </button>
+                                                                                </motion.div>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div className='transition duration-300 ease-in-out'>
+                                                                            <a href={project.codeLink} target='_blank' rel='noopener noreferrer'>
+                                                                                <motion.div
+                                                                                    className="box"
+                                                                                    whileHover={{ scale: 1.05 }}
+                                                                                    whileTap={{ scale: 0.9 }}
+                                                                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                                                                >
+                                                                                    <button className='btn-prj md:text-lg text-sm hover:shadow-lg'>
+                                                                                        <FaCode size={28} />
+                                                                                    </button>
+                                                                                </motion.div>
+                                                                            </a>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div>
-                                                            {project.title &&
-                                                                <h1 className='p-3 text-white md:text-2xl text-xl font-list-font font-semibold mt-1 drop-shadow-md'>{project.title}</h1>}
-                                                        </div>
-                                                        <div className='px-3 flex flex-row flex-wrap gap-2'>
-                                                            {project.codesUsed.map((code, idx) => (
-                                                                <span key={idx} className='text-gray-200 md:text-md text-xs font-semibold font-hero-font bg-indigo-500 border-primary-2 p-2 rounded-lg shadow-lg mr-2'>{code}</span>
-                                                            ))}
-                                                        </div>
+                                                            <div>
+                                                                {project.title &&
+                                                                    <h1 className='p-3 text-white md:text-2xl text-xl font-list-font font-semibold mt-1 drop-shadow-md'>{project.title}</h1>}
+                                                            </div>
+                                                            <div className='px-3 flex flex-row flex-wrap gap-2'>
+                                                                {project.codesUsed.map((code, idx) => (
+                                                                    <span key={idx} className='text-gray-200 md:text-md text-xs font-semibold font-hero-font bg-indigo-500 border-primary-2 p-2 rounded-lg shadow-lg mr-2'>{code}</span>
+                                                                ))}
+                                                            </div>
 
-                                                    </div>
+                                                        </motion.div>
+                                                    </a>
                                                 </motion.div>
                                             </CarouselItem>
                                         ))}
