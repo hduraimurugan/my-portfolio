@@ -13,8 +13,8 @@ import TwitterImg from '../assets/Twitter.png'
 
 import { FaLink } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
-
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer'
 import {
     Carousel,
     CarouselContent,
@@ -24,7 +24,13 @@ import {
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 
+
 const Projects = ({ RevealOnScroll }) => {
+    
+    const { ref, inView } = useInView({
+        triggerOnce: true, // The animation runs only once when it first comes into view
+        threshold: 0.1, // Animation triggers when 10% of the element is visible
+    });
 
     const projects = [
         {
@@ -134,7 +140,7 @@ const Projects = ({ RevealOnScroll }) => {
                             </div>
                         </div>
 
-                        <div className='py-5 md:w-full '>
+                        <div className='py-5 md:w-full ' ref={ref}>
 
                             <div className='flex flex-col md:flex-row flex-wrap items-center md:justify-center px-10  gap-7 parent-container'>
                                 <Carousel
@@ -155,7 +161,11 @@ const Projects = ({ RevealOnScroll }) => {
                                                     className="box"
                                                     whileHover={{ scale: 1.03 }}
                                                     whileTap={{ scale: 0.9 }}
-                                                    transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                                                    // transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                                                    initial={{ opacity: 0, y: 100 }}
+                                                    animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                                                    exit={{ opacity: 0, y: -100 }}
+                                                    transition={{ type: "spring", stiffness: 400, damping: 10, duration: 0.5, delay: index*0.1 }}
                                                 >
                                                     <div className='bg-border-prj card-hoverr-eff card' key={index}>
                                                         <div className='relative' >
