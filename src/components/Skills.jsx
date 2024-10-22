@@ -117,7 +117,7 @@ function Skills({ RevealOnScroll }) {
             <RevealOnScroll>
                 <div className='flex flex-col px-5 py-32 container mx-auto justify-center' >
                     <div className='flex justify-center px-10 py-5' ref={ref}>
-                        <h1 className='text-white text-center font-bold md:text-4xl text-md font-list-font border-b-4 border-secondary md:w-[500px] w-[230px]'>
+                        <h1 className='text-white text-center font-bold md:text-4xl text-md font-list-font border-b-0 border-secondary md:w-[500px] w-[230px]'>
                             Skills & Technologies I Know
                         </h1>
                     </div>
@@ -125,7 +125,7 @@ function Skills({ RevealOnScroll }) {
                     {skillsData.map((category, index) => (
                         <div key={index} >
                             <div className='flex justify-center px-10 mb-5 mt-10'>
-                                <h3 className='text-white font-bold md:text-2xl text-md font-list-font border-b-4 border-secondary'>
+                                <h3 className='text-white font-bold md:text-2xl text-md font-list-font border-b-0 border-secondary'>
                                     {category.category}
                                 </h3>
                             </div>
@@ -149,16 +149,16 @@ function Skills({ RevealOnScroll }) {
                                                     key={idx}
                                                     className='flex flex-col items-center justify-center gap-1 px-7 py-7 bg-gray-100 md:h-[154px] md:w-[115px] w-[90px] card-hoverr-eff rounded-lg shadow-md'
                                                 >
-                                                    <skill.icon className="md:text-4xl text-3xl text-blue-800" />
+                                                    <skill.icon className="md:text-4xl text-3xl text-teal-800" />
 
 
-                                                    <p className='text-blue-800 text-center font-bold md:text-lg text-sm font-list-font mt-2'>
+                                                    <p className='text-teal-800 text-center font-bold md:text-lg text-sm font-list-font mt-2'>
                                                         {skill.name}
                                                     </p>
 
                                                     <div className="w-full bg-gray-400 rounded-full h-1.5 mt-2">
                                                         <div
-                                                            className="bg-blue-800 h-1.5 rounded-full"
+                                                            className="bg-teal-800 h-1.5 rounded-full"
                                                             style={{ width: `${skill.skill}%` }}
                                                         ></div>
                                                     </div>

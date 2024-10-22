@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Bars3Icon } from '@heroicons/react/24/solid'
-import { PiAlignRightFill } from "react-icons/pi";
+import { PiAlignRight, PiAlignRightFill } from "react-icons/pi";
 import { PiAlignRightDuotone } from "react-icons/pi";
 import { SiDevpost } from "react-icons/si";
 
@@ -30,25 +30,25 @@ const Header = () => {
             <header className='fixed w-full top-0 left-0 z-10 shadow-md backdrop-filter backdrop-blur-md'>
 
                 <div className='flex justify-around items-center py-7 container mx-auto '>
-                    <a className='text-white md:text-2xl text-xl font-row-font flex items-center gap-0.5' href='#'><SiDevpost className='md:text-3xl text-2xl' />uraimurugan H</a>
+                    <a className='text-white md:text-2xl text-xl font-row-font flex items-center gap-0.5' href='#'>Duraimurugan H</a>
                     <nav className='hidden md:block'>
                         <ul className='flex text-white font-list-font'>
-                            <li><a href='#' className={activeLink === '#' ? 'active' : ''}
+                            <li><a href='#' className={activeLink === '#' ? 'active text-teal-400' : ''}
                                 onClick={() => toggleClass('#')} >Home</a></li>
-                            <li><a href='#about' className={activeLink === '#about' ? 'active' : ''}
+                            <li><a href='#about' className={activeLink === '#about' ? 'active text-teal-400' : ''}
                                 onClick={() => toggleClass('#about')}>About</a></li>
-                            <li><a href='#skills' className={activeLink === '#skills' ? 'active' : ''}
+                            <li><a href='#skills' className={activeLink === '#skills' ? 'active text-teal-400' : ''}
                                 onClick={() => toggleClass('#skills')}>Skills</a></li>
-                            <li><a href='#projects' className={activeLink === '#projects' ? 'active' : ''}
+                            <li><a href='#projects' className={activeLink === '#projects' ? 'active text-teal-400' : ''}
                                 onClick={() => toggleClass('#projects')}>Projects</a></li>
-                            <li><a href='#qualification' className={activeLink === '#qualification' ? 'active' : ''}
+                            <li><a href='#qualification' className={activeLink === '#qualification' ? 'active text-teal-400' : ''}
                                 onClick={() => toggleClass('#qualification')}>Qualification</a></li>
-                            <li><a href='#contact' className={activeLink === '#contact' ? 'active' : ''}
+                            <li><a href='#contact' className={activeLink === '#contact' ? 'active text-teal-400' : ''}
                                 onClick={() => toggleClass('#contact')}>Contact</a></li>
                         </ul>
                     </nav>
                     {toggleMenu && <nav className='block md:hidden'>
-                        <div className='flex flex-col text-white mobile-nav font-list-font' onClick={handleLinkClick}>
+                        <div className='flex flex-col text-teal-400 mobile-nav font-list-font' onClick={handleLinkClick}>
                             <a href='#'>
                                 <HiHome size={24} />
                                 <span className='mt-2'>Home</span>
@@ -76,7 +76,7 @@ const Header = () => {
                         </div>
                     </nav>}
                     <button onClick={() => setToggleMenu(!toggleMenu)} className='block md:hidden'>
-                        {toggleMenu ? <PiAlignRightFill size={34} className='text-white h-7' /> : <PiAlignRightDuotone size={34} className='text-white h-7' />}
+                        {toggleMenu ? <PiAlignRightFill size={34} className='text-teal-400 h-7' /> : <PiAlignRight size={34} className='text-white h-7' />}
 
                     </button>
                 </div>

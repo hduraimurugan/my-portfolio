@@ -35,45 +35,45 @@ const Hero = () => {
 
                     <div className='flex md:flex-row flex-col justify-center items-center md:w-1/2'>
                         <div className='md:flex md:flex-col text-gray-100 gap-7 drop-shadow-md px-16 items-center justify-center hidden'>
-                        <motion.div
-                                    ref={ref}
-                                    initial={{ opacity: 0, y: 100 }}
-                                    animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
-                                    exit={{ opacity: 0, y: -100 }}
-                                    transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5 }}
-                                >
-                            <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='btn-icons'><FaLinkedin size={30} /></a>
+                            <motion.div
+                                ref={ref}
+                                initial={{ opacity: 0, y: 100 }}
+                                animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                                exit={{ opacity: 0, y: -100 }}
+                                transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5 }}
+                            >
+                                <a href='https://www.linkedin.com/in/duraimurugan16/' target="_blank" className='btn-icons'><FaLinkedin size={30} /></a>
                             </motion.div>
                             <motion.div
-                                    ref={ref}
-                                    initial={{ opacity: 0, y: 100 }}
-                                    animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
-                                    exit={{ opacity: 0, y: -100 }}
-                                    transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay:0.2 }}
-                                >
-                            <a href='https://github.com/hduraimurugan' target="_blank" className='btn-icons'><AiOutlineGithub size={30} /></a>
+                                ref={ref}
+                                initial={{ opacity: 0, y: 100 }}
+                                animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                                exit={{ opacity: 0, y: -100 }}
+                                transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay: 0.2 }}
+                            >
+                                <a href='https://github.com/hduraimurugan' target="_blank" className='btn-icons'><AiOutlineGithub size={30} /></a>
                             </motion.div>
                             <motion.div
-                                    ref={ref}
-                                    initial={{ opacity: 0, y: 100 }}
-                                    animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
-                                    exit={{ opacity: 0, y: -100 }}
-                                    transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay:0.3 }}
-                                >
-                            <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='btn-icons'><AiOutlineMedium size={30} /></a>
+                                ref={ref}
+                                initial={{ opacity: 0, y: 100 }}
+                                animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                                exit={{ opacity: 0, y: -100 }}
+                                transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay: 0.3 }}
+                            >
+                                <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='btn-icons'><AiOutlineMedium size={30} /></a>
                             </motion.div>
                         </div>
 
                         <div className='flex flex-col mt-10 mb-10'>
                             <div className='text-white font-list-font drop-shadow-md w-max'>
-                                <h1 className='text-indigo-300 md:text-4xl text-2xl font-extrabold mb-3'>
+                                <h1 className='text-teal-300 md:text-4xl text-2xl font-extrabold mb-3'>
                                     Hi,
                                 </h1>
                                 <h1 className='animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 md:text-5xl text-3xl text-white  font-list-font font-bold'>
                                     It&apos;s Duraimurugan H,</h1>
 
                                 <p className='md:text-4xl text-xl mt-3'>
-                                    I am a <span className='text-indigo-300 md:text-4xl text-2xl font-extrabold'>MERN</span> stack Developer
+                                    I am a <span className='text-teal-300 md:text-4xl text-2xl font-extrabold'>MERN</span> stack Developer
                                 </p>
                             </div>
 
@@ -105,7 +105,7 @@ const Hero = () => {
                                     initial={{ opacity: 0, y: 100 }}
                                     animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
                                     exit={{ opacity: 0, y: -100 }}
-                                    transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay: 0.3}}
+                                    transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay: 0.3 }}
                                 >
                                     <a href='https://medium.com/@hduraimurugan/from-banking-to-coding-my-journey-of-passion-and-perseverance-22ecc02b665a' target="_blank" className='btn-icons'><AiOutlineMedium size={25} /></a>
                                 </motion.div>
@@ -151,12 +151,14 @@ const Hero = () => {
 
                     </div>
 
-                    <div className='flex items-center justify-center md:w-1/3'>
-
-                        <div className='flex magicpattern mix-blend-lighten md:relative'>
+                    <div className='flex items-center justify-center md:w-1/3' ref={ref}>
+                        <motion.div className='flex magicpattern mix-blend-lighten md:relative'
+                            initial={{ opacity: 0, y: 100 }}
+                            animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
+                            exit={{ opacity: 0, y: -100 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 10, duration: 0.5, delay: 0.2 }}>
                             <img className='h-auto max-w-full md:absolute md:bottom-12' src={Hero3Img} alt='hero' />
-                        </div>
-
+                        </motion.div>
                     </div>
 
                 </div>

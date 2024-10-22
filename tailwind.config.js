@@ -32,8 +32,8 @@ export default {
   			typing: 'typing 3s steps(20) infinite alternate, blink .2s infinite'
   		},
   		borderColor: {
-  			primary: 'rgb(19, 31, 189)',
-  			secondary: 'rgb(23, 84, 227)'
+			primary: 'rgb(0, 102, 94)',      // Thick (Darker) Teal
+			secondary: 'rgb(0, 191, 165)',   // Light Teal
   		},
   		backgroundImage: {
 			'hero-pattern': "url('./src/assets/backdrop.jpg')",

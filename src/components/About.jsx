@@ -35,9 +35,9 @@ const About = ({ RevealOnScroll }) => {
                                 initial={{ opacity: 0, y: 100 }}
                                 animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
                                 exit={{ opacity: 0, y: -100 }}
-                                transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay: 0.1 }}
+                                transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay: 0.3 }}
                             >
-                                <h1 className='text-white font-bold md:text-4xl text-2xl font-list-font border-b-4 border-secondary md:w-[170px] w-[120px]'>About Me</h1>
+                                <h1 className='text-white font-bold md:text-4xl text-2xl font-list-font border-b-0 border-secondary md:w-[170px] w-[120px]'>About Me</h1>
                                 <ul className='list-none text-white'>
                                     <li>
                                         <p className='text-white text-justify md:text-2xl text-md font-list-font mt-10'>I'm <span className='font-bold'>Duraimurugan H</span>, a passionate web developer with a background in <span className='font-bold'>Instrumentation Engineering</span>. My journey began in the banking sector, where I worked as a <span className='font-bold'>Relationship Manager</span> in <span className='font-bold'>City Union Bank, Bangalore.</span></p>

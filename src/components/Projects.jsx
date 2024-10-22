@@ -136,7 +136,7 @@ const Projects = ({ RevealOnScroll }) => {
                     <div className='flex flex-col px-10 py-32 justify-center container mx-auto'>
                         <div className='py-5 md:px-24 px-10 md:w-full'>
                             <div className='flex flex-col items-center justify-center'>
-                                <h1 className='text-white font-bold md:text-4xl text-2xl font-list-font border-b-4 border-primary md:w-[140px] w-[100px]'>Projects</h1>
+                                <h1 className='text-white font-bold md:text-4xl text-2xl font-list-font border-b-0 border-primary md:w-[140px] w-[100px]'>Projects</h1>
                                 <p className='text-white md:text-2xl text-xl font-list-font mt-10'>Here are some of my projects, Check them out...</p>
                             </div>
                         </div>
@@ -223,7 +223,7 @@ const Projects = ({ RevealOnScroll }) => {
                                                             </div>
                                                             <div className='px-3 flex flex-row flex-wrap gap-2'>
                                                                 {project.codesUsed.map((code, idx) => (
-                                                                    <span key={idx} className='text-gray-200 md:text-md text-xs font-semibold font-hero-font bg-indigo-500 border-primary-2 p-2 rounded-lg shadow-lg mr-2'>{code}</span>
+                                                                    <span key={idx} className='text-gray-200 md:text-md text-xs font-semibold font-hero-font bg-slate-900 border-primary-2 p-2 rounded-lg shadow-lg mr-2'>{code}</span>
                                                                 ))}
                                                             </div>
 
@@ -233,8 +233,8 @@ const Projects = ({ RevealOnScroll }) => {
                                             </CarouselItem>
                                         ))}
                                     </CarouselContent>
-                                    <CarouselPrevious className="bg-blue-900" />
-                                    <CarouselNext className="bg-blue-950" />
+                                    <CarouselPrevious className="bg-slate-900" />
+                                    <CarouselNext className="bg-slate-950" />
                                 </Carousel>
 
                                 {/* {projects.map((project, index) => (

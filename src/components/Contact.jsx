@@ -56,7 +56,7 @@ const Contact = () => {
                 <div className='flex flex-col px-10 py-5 justify-center'>
                     
                     <div className='flex justify-center'>
-                        <h1 className='text-white font-bold md:text-4xl text-2xl font-list-font border-b-4 border-primary md:w-[205px] w-[140px]'>
+                        <h1 className='text-white font-bold md:text-4xl text-2xl font-list-font border-b-0 border-primary md:w-[205px] w-[140px]'>
                             Contact Me</h1>
                     </div>
 
