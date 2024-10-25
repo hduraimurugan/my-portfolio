@@ -10,7 +10,7 @@ import netflixImg from "../assets/netflix.png"
 import UrlShortner from '../assets/URLShortner.png'
 import JobPortal from '../assets/JobPortal.png'
 import TwitterImg from '../assets/Twitter.png'
-import ChatAppImg from '../assets/ChatApp.png'
+import ChatAppImg from '../assets/chatApp.png'
 
 import { FaLink } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
