@@ -138,10 +138,15 @@ const Hero = () => {
                                         whileTap={{ scale: 0.9 }}
                                         transition={{ type: "spring", stiffness: 400, damping: 10, duration: 0.5, delay: 0.1 }}
                                     >
-                                        <a className='btn-prj font-list-font text-md py-3 px-5 rounded-full flex gap-1 items-center'
-                                            href='https://docs.google.com/document/d/1nzY9FRHrUO1ORzvCTA9O5vb1bOvDWCdxEhAUn4T1Pg8/edit'
+                                        <a
+                                            className='btn-prj font-list-font text-md py-3 px-5 rounded-full flex gap-1 items-center'
+                                            href='https://docs.google.com/document/d/1nzY9FRHrUO1ORzvCTA9O5vb1bOvDWCdxEhAUn4T1Pg8/export?format=pdf'
                                             target='_blank'
-                                        >Resume <IoMdCloudDownload size={25} /></a>
+                                            download="Duraimurugan_Resume.pdf"
+                                        >
+                                            Resume <IoMdCloudDownload size={25} />
+                                        </a>
+
                                     </motion.div>
                                 </div>
 
