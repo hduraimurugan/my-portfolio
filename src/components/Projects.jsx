@@ -9,7 +9,7 @@ import chessApiImg from '../assets/chessApi.png'
 import routerDomImg from '../assets/routerDom.png'
 import shipKartImg from '../assets/shipKart.png'
 import LBMSImg from '../assets/LBMS.png'
-import blogApp from '../assets/blogApp.png'
+import blogApp from '../assets/BlogApp.png'
 import reactImg from "../assets/reactQuiz.png"
 import netflixImg from "../assets/netflix.png"
 import UrlShortner from '../assets/URLShortner.png'
