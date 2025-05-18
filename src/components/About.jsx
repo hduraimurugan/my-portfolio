@@ -1,63 +1,64 @@
-import React from 'react'
-import AboutImg from '../assets/about.png'
+import React from 'react';
+import AboutImg from '../assets/about.png';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer'
+import { useInView } from 'react-intersection-observer';
+import { SkillsOrbs } from '../lib/orbs.jsx';
 
-const About = ({ RevealOnScroll }) => {
-
+const About = () => {
     const { ref, inView } = useInView({
-        triggerOnce: true, // The animation runs only once when it first comes into view
-        threshold: 0.1, // Animation triggers when 10% of the element is visible
+        triggerOnce: true,
+        threshold: 0.1,
     });
 
     return (
-        <>
-            <section className='bg-primary opacity-95' id='about'>
+        <section className="bg-primary opacity-95 " id="about">
+            <div className="flex flex-col md:flex-row px-5 py-32 container mx-auto justify-center items-center gap-10">
+                {/* Image Section */}
+                <motion.div
+                    ref={ref}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ type: 'tween', duration: 0.5 }}
+                    className="md:w-1/2 px-10"
+                >
+                    <img
+                        src={AboutImg}
+                        alt="About Illustration"
+                        className="rounded-lg shadow-lg"
+                    />
+                </motion.div>
 
-                <div className='flex flex-col md:flex-row px-5 py-32 container mx-auto justify-center'>
-                    <div className='py-5 px-10 md:w-1/2'>
-                        <motion.div
-                            ref={ref}
-                            initial={{ opacity: 0, y: 100 }}
-                            animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
-                            exit={{ opacity: 0, y: -100 }}
-                            transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5 }}
-                        >
-                            <img src={AboutImg} alt='hero' />
-                        </motion.div>
+                {/* Text Section */}
+                <motion.div
+                    ref={ref}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ type: 'tween', duration: 0.5, delay: 0.3 }}
+                    className="md:w-1/2 px-10"
+                >
+                    <h2 className="text-white font-bold text-2xl md:text-4xl w-fit mb-6">
+                        About Me
+                    </h2>
+                    <div className="space-y-6 text-white text-md md:text-xl text-justify font-list-font leading-relaxed">
+                        <p>
+                            I'm <span className="font-bold">Duraimurugan H</span>, a passionate web developer with a foundation in <span className="font-bold">Electronics and Instrumentation Engineering</span>. I began my professional journey in the banking sector as a <span className="font-bold">Relationship Manager</span> at <span className="font-bold">City Union Bank, Bangalore</span>.
+                        </p>
+                        <p>
+                            My growing interest in technology inspired a career transition into web development. I upskilled through a full stack development program, gaining hands-on experience in <span className="font-bold">HTML</span>, <span className="font-bold">CSS</span>, <span className="font-bold">JavaScript</span>, <span className="font-bold">ReactJS</span>, <span className="font-bold">NodeJS</span>, <span className="font-bold">MongoDB</span>, and <span className="font-bold">MySQL</span>.
+                        </p>
+                        <p>
+                            Currently, I am working with a <span className="font-bold">startup team</span>, contributing to real-world projects that challenge and enhance my development skills.
+                        </p>
+                        <p>
+                            With a unique blend of technical expertise and client-facing experience, I am eager to contribute to innovative teams and build impactful digital solutions.
+                        </p>
                     </div>
 
+                </motion.div>
+            </div>
+            <SkillsOrbs />
+        </section>
+    );
+};
 
-                    <div className='md:w-1/2 flex justify-center'>
-                        <div className='flex flex-col justify-center px-10 py-10'>
-                            <motion.div
-                                ref={ref}
-                                initial={{ opacity: 0, y: 100 }}
-                                animate={inView ? { opacity: 1, y: 0 } : {}} // Animates only when in view
-                                exit={{ opacity: 0, y: -100 }}
-                                transition={{ type: "tween", stiffness: 400, damping: 10, duration: 0.5, delay: 0.3 }}
-                            >
-                                <h1 className='text-white font-bold md:text-4xl text-2xl font-list-font border-b-0 border-secondary md:w-[170px] w-[120px]'>About Me</h1>
-                                <ul className='list-none text-white'>
-                                    <li>
-                                        <p className='text-white text-justify md:text-2xl text-md font-list-font mt-10'>I'm <span className='font-bold'>Duraimurugan H</span>, a passionate web developer with a background in <span className='font-bold'>Instrumentation Engineering</span>. My journey began in the banking sector, where I worked as a <span className='font-bold'>Relationship Manager</span> in <span className='font-bold'>City Union Bank, Bangalore.</span></p>
-                                    </li>
-                                    <li>
-                                        <p className='text-white text-justify md:text-2xl text-md font-list-font mt-7'> My passion for the technology led me to transition into web development, where I gained expertise in <span className='font-bold'>HTML, CSS, JavaScript, ReactJS, NodeJS, MongoDB, MySQL </span> and more. </p>
-                                    </li>
-                                    <li>
-                                        <p className='text-white text-justify md:text-2xl text-md font-list-font mt-7'>I'm eager to contribute my diverse skill set and enthusiasm to dynamic teams in the tech industry.</p>
-                                    </li>
-                                </ul>
-                            </motion.div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section >
-        </>
-    )
-}
-
-export default About
+export default About;
